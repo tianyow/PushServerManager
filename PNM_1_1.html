@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Push Server Backend Management</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/materialdesignicons.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+
+  <body>
+
+    <nav class="navbar header-nav">
+
+      <div class="header-nav-wrap">
+        <a class="sys-title" href="">Push Server</a>
+
+        <ul class="nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#"><i class="mdi mdi-flash-outline"></i> 推播管理</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="mdi mdi-account-outline"></i> 帳號管理</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="mdi mdi-dns-outline"></i> 伺服器管理</a>
+          </li>
+        </ul>
+
+      </div><!-- /.header-info-wrap -->
+
+
+      <div class="user-info-wrap">
+        <a href="" class="username">jefferyho@pershing.com.tw</a>
+        <div class="dropdown">
+          <a class="user-photo-icon" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <img src="https://placekitten.com/48/48" alt="">
+          </a>
+          <div class="dropdown-menu dropdown-menu-right">
+            <a class="dropdown-item" href="#"><i class="mdi mdi-account-circle-outline"></i> 使用者設定</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#"><i class="mdi mdi-power-standby"></i> 登出系統</a>
+          </div>
+        </div>
+      </div><!-- /.logout-wrap -->
+
+    </nav><!-- /.header-nav -->
+    
+    <div class="page-body">
+
+      <div class="page-content-wrapper">
+
+        <div class="page-content-wrapper-inner">
+
+          <div class="PSM-tab-wrapper">
+          
+            <div class="PSM-tabs">
+              <ul class="nav nav-pills" id="PSM-tab" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active" id="PSM-tab-app-setting" data-toggle="pill" href="#app-setting" role="tab">APP 註冊與設定</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="PSM-tab-history-query" data-toggle="pill" href="#history-query" role="tab">歷史訊息查詢</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="PSM-tab-stastic-report" data-toggle="pill" href="#stastic-report" role="tab">統計報表</a>
+                </li>
+              </ul>
+
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search..">
+                <div class="input-group-append">
+                  <button class="btn" type="button" id=""><i class="mdi mdi-magnify"></i></button>
+                </div>
+              </div>
+            </div><!-- /.PSM-tabs -->
+
+            <div class="tab-content" id="pills-tabContent">
+
+              <div class="tab-pane fade show active" id="app-setting" role="tabpanel">
+
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="card card-app">
+                      <img src="https://placekitten.com/320/200" class="card-img-top" alt="">
+                      <div class="card-body">
+                        <div class="card-user-icon-wrapper">
+                          <div class="card-user-icon">北
+                            <!-- <img src="http://placehold.it/64x64" alt=""> -->
+                          </div>
+                        </div>
+                        <div class="card-app-title">北祥 Worcloud</div>
+                        <div class="card-app-status-wrap">
+                          <div class="row">
+                            <div class="col col-md-4 normal">
+                              <small>今日推播</small>
+                              <div class="app-status-txt">123456</div>
+                            </div>
+                            <div class="col col-md-4 success">
+                              <small>成功</small>
+                              <div class="app-status-txt">123456</div>
+                            </div>
+                            <div class="col col-md-4 fail">
+                              <small>失敗</small>
+                              <div class="app-status-txt">0</div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col col-md-4">
+                              <small>今日預約</small>
+                              <div class="app-status-txt">3899</div>
+                            </div>
+                            <div class="col col-md-4">
+                              <small>本月推播</small>
+                              <div class="app-status-txt">999999</div>
+                            </div>
+                          </div>
+                        </div><!-- /.card-app-status-wrap -->
+                      </div>
+                      <a class="btn btn-app-setting" href=""><i class="mdi mdi-settings"></i></a>
+                    </div><!-- /.card-app -->
+                  </div>
+                  <div class="col-md-4">
+                    <div class="card card-app">
+                      <img src="https://placekitten.com/320/160" class="card-img-top" alt="">
+                      <div class="card-body">
+                        <div class="card-user-icon-wrapper">
+                          <div class="card-user-icon">C
+                            <!-- <img src="http://placehold.it/64x64" alt=""> -->
+                          </div>
+                        </div>
+                        <div class="card-app-title">CSP</div>
+                        <div class="card-app-status-wrap">
+                          <div class="row">
+                            <div class="col col-md-4 normal">
+                              <small>今日推播</small>
+                              <div class="app-status-txt">123456</div>
+                            </div>
+                            <div class="col col-md-4 success">
+                              <small>成功</small>
+                              <div class="app-status-txt">123456</div>
+                            </div>
+                            <div class="col col-md-4 fail">
+                              <small>失敗</small>
+                              <div class="app-status-txt">0</div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col col-md-4">
+                              <small>今日預約</small>
+                              <div class="app-status-txt">3899</div>
+                            </div>
+                            <div class="col col-md-4">
+                              <small>本月推播</small>
+                              <div class="app-status-txt">999999</div>
+                            </div>
+                          </div>
+                        </div><!-- /.card-app-status-wrap -->
+                      </div>
+                      <a class="btn btn-app-setting" href=""><i class="mdi mdi-settings"></i></a>
+                    </div><!-- /.card-app -->
+                  </div>
+                  <div class="col-md-4">
+                    <div class="card card-app">
+                      <img src="https://placekitten.com/320/150" class="card-img-top" alt="">
+                      <div class="card-body">
+                        <div class="card-user-icon-wrapper">
+                          <div class="card-user-icon">S
+                            <!-- <img src="http://placehold.it/64x64" alt=""> -->
+                          </div>
+                        </div>
+                        <div class="card-app-title">SPLA</div>
+                        <div class="card-app-status-wrap">
+                          <div class="row">
+                            <div class="col col-md-4 normal">
+                              <small>今日推播</small>
+                              <div class="app-status-txt">123456</div>
+                            </div>
+                            <div class="col col-md-4 success">
+                              <small>成功</small>
+                              <div class="app-status-txt">123456</div>
+                            </div>
+                            <div class="col col-md-4 fail">
+                              <small>失敗</small>
+                              <div class="app-status-txt">0</div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col col-md-4">
+                              <small>今日預約</small>
+                              <div class="app-status-txt">3899</div>
+                            </div>
+                            <div class="col col-md-4">
+                              <small>本月推播</small>
+                              <div class="app-status-txt">999999</div>
+                            </div>
+                          </div>
+                        </div><!-- /.card-app-status-wrap -->
+                      </div>
+                      <a class="btn btn-app-setting" href=""><i class="mdi mdi-settings"></i></a>
+                    </div><!-- /.card-app -->
+                  </div>
+                  <div class="col-md-4">
+                    <div class="card card-app">
+                      <img src="https://placekitten.com/320/170" class="card-img-top" alt="">
+                      <div class="card-body">
+                        <div class="card-user-icon-wrapper">
+                          <div class="card-user-icon">推
+                            <!-- <img src="http://placehold.it/64x64" alt=""> -->
+                          </div>
+                        </div>
+                        <div class="card-app-title">推播系統</div>
+                        <div class="card-app-status-wrap">
+                          <div class="row">
+                            <div class="col col-md-4 normal">
+                              <small>今日推播</small>
+                              <div class="app-status-txt">123456</div>
+                            </div>
+                            <div class="col col-md-4 success">
+                              <small>成功</small>
+                              <div class="app-status-txt">123456</div>
+                            </div>
+                            <div class="col col-md-4 fail">
+                              <small>失敗</small>
+                              <div class="app-status-txt">0</div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col col-md-4">
+                              <small>今日預約</small>
+                              <div class="app-status-txt">3899</div>
+                            </div>
+                            <div class="col col-md-4">
+                              <small>本月推播</small>
+                              <div class="app-status-txt">999999</div>
+                            </div>
+                          </div>
+                        </div><!-- /.card-app-status-wrap -->
+                      </div>
+                      <a class="btn btn-app-setting" href="#"><i class="mdi mdi-settings"></i></a>
+                    </div><!-- /.card-app -->
+                  </div>
+                  <div class="col-md-4">
+                    <div class="card card-app">
+                      <img src="https://placekitten.com/320/170" class="card-img-top" alt="">
+                      <div class="card-body">
+                        <div class="card-user-icon-wrapper">
+                          <div class="card-user-icon">推
+                            <!-- <img src="http://placehold.it/64x64" alt=""> -->
+                          </div>
+                        </div>
+                        <div class="card-app-title">推播系統</div>
+                        <div class="card-app-status-wrap">
+                          <div class="row">
+                            <div class="col col-md-4 normal">
+                              <small>今日推播</small>
+                              <div class="app-status-txt">123456</div>
+                            </div>
+                            <div class="col col-md-4 success">
+                              <small>成功</small>
+                              <div class="app-status-txt">123456</div>
+                            </div>
+                            <div class="col col-md-4 fail">
+                              <small>失敗</small>
+                              <div class="app-status-txt">0</div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col col-md-4">
+                              <small>今日預約</small>
+                              <div class="app-status-txt">3899</div>
+                            </div>
+                            <div class="col col-md-4">
+                              <small>本月推播</small>
+                              <div class="app-status-txt">999999</div>
+                            </div>
+                          </div>
+                        </div><!-- /.card-app-status-wrap -->
+                      </div>
+                      <a class="btn btn-app-setting" href="#"><i class="mdi mdi-settings"></i></a>
+                    </div><!-- /.card-app -->
+                  </div>
+                  <div class="col-md-4">
+                    <div class="card card-app">
+                      <img src="https://placekitten.com/320/170" class="card-img-top" alt="">
+                      <div class="card-body">
+                        <div class="card-user-icon-wrapper">
+                          <div class="card-user-icon">推
+                            <!-- <img src="http://placehold.it/64x64" alt=""> -->
+                          </div>
+                        </div>
+                        <div class="card-app-title">推播系統</div>
+                        <div class="card-app-status-wrap">
+                          <div class="row">
+                            <div class="col col-md-4 normal">
+                              <small>今日推播</small>
+                              <div class="app-status-txt">123456</div>
+                            </div>
+                            <div class="col col-md-4 success">
+                              <small>成功</small>
+                              <div class="app-status-txt">123456</div>
+                            </div>
+                            <div class="col col-md-4 fail">
+                              <small>失敗</small>
+                              <div class="app-status-txt">0</div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col col-md-4">
+                              <small>今日預約</small>
+                              <div class="app-status-txt">3899</div>
+                            </div>
+                            <div class="col col-md-4">
+                              <small>本月推播</small>
+                              <div class="app-status-txt">999999</div>
+                            </div>
+                          </div>
+                        </div><!-- /.card-app-status-wrap -->
+                      </div>
+                      <a class="btn btn-app-setting" href="#"><i class="mdi mdi-settings"></i></a>
+                    </div><!-- /.card-app -->
+                  </div>
+                  <div class="col-md-4">
+                    <div class="card card-app">
+                      <img src="https://placekitten.com/320/170" class="card-img-top" alt="">
+                      <div class="card-body">
+                        <div class="card-user-icon-wrapper">
+                          <div class="card-user-icon">推
+                            <!-- <img src="http://placehold.it/64x64" alt=""> -->
+                          </div>
+                        </div>
+                        <div class="card-app-title">推播系統</div>
+                        <div class="card-app-status-wrap">
+                          <div class="row">
+                            <div class="col col-md-4 normal">
+                              <small>今日推播</small>
+                              <div class="app-status-txt">123456</div>
+                            </div>
+                            <div class="col col-md-4 success">
+                              <small>成功</small>
+                              <div class="app-status-txt">123456</div>
+                            </div>
+                            <div class="col col-md-4 fail">
+                              <small>失敗</small>
+                              <div class="app-status-txt">0</div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col col-md-4">
+                              <small>今日預約</small>
+                              <div class="app-status-txt">3899</div>
+                            </div>
+                            <div class="col col-md-4">
+                              <small>本月推播</small>
+                              <div class="app-status-txt">999999</div>
+                            </div>
+                          </div>
+                        </div><!-- /.card-app-status-wrap -->
+                      </div>
+                      <a class="btn btn-app-setting" href="#"><i class="mdi mdi-settings"></i></a>
+                    </div><!-- /.card-app -->
+                  </div>
+                  <div class="col-md-4">
+                    <div class="card card-app">
+                      <img src="https://placekitten.com/320/170" class="card-img-top" alt="">
+                      <div class="card-body">
+                        <div class="card-user-icon-wrapper">
+                          <div class="card-user-icon">推
+                            <!-- <img src="http://placehold.it/64x64" alt=""> -->
+                          </div>
+                        </div>
+                        <div class="card-app-title">推播系統</div>
+                        <div class="card-app-status-wrap">
+                          <div class="row">
+                            <div class="col col-md-4 normal">
+                              <small>今日推播</small>
+                              <div class="app-status-txt">123456</div>
+                            </div>
+                            <div class="col col-md-4 success">
+                              <small>成功</small>
+                              <div class="app-status-txt">123456</div>
+                            </div>
+                            <div class="col col-md-4 fail">
+                              <small>失敗</small>
+                              <div class="app-status-txt">0</div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col col-md-4">
+                              <small>今日預約</small>
+                              <div class="app-status-txt">3899</div>
+                            </div>
+                            <div class="col col-md-4">
+                              <small>本月推播</small>
+                              <div class="app-status-txt">999999</div>
+                            </div>
+                          </div>
+                        </div><!-- /.card-app-status-wrap -->
+                      </div>
+                      <a class="btn btn-app-setting" href="#"><i class="mdi mdi-settings"></i></a>
+                    </div><!-- /.card-app -->
+                  </div>
+                </div>
+
+                <div class="property-panel">
+                  <div class="card card-body property-wrapper">
+                    <ul class="nav nav-tabs nav-fill" id="" role="tablist">
+                      <li class="nav-item">
+                        <a class="nav-link active" id="basic-setting-tab" data-toggle="tab" href="#basicSetting" role="tab">基本設定</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="cert-manage-tab" data-toggle="tab" href="#certManage" role="tab">憑證管理</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="usage-manage-tab" data-toggle="tab" href="#usageManage" role="tab">使用量管理</a>
+                      </li>
+                    </ul>
+                    <div class="tab-content" id="">
+                      <div class="tab-pane fade show active" id="basicSetting" role="tabpanel">
+                        
+                        <div class="form-group row">
+                          <label for="" class="col-md-3 col-form-label">APP 名稱</label>
+                          <div class="col">
+                            <input type="text" class="form-control" id="" placeholder="">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label for="" class="col-md-3 col-form-label">APP ID</label>
+                          <div class="col">
+                            <input type="text" class="form-control" id="" placeholder="">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label for="" class="col-md-3 col-form-label">APP 圖示</label>
+                          <div class="col">
+                            <div class="custom-file">
+                              <input type="file" class="custom-file-input" id="customFile">
+                              <label class="custom-file-label" for="customFile">請選擇檔案</label>
+                            </div>
+                            <small>(請盡量上傳 320x200 或等比例的尺寸)</small>
+                          </div>
+                        </div>
+                        <div class="app-image-setting-wrapper">
+                          <img src="https://placekitten.com/320/199" alt="">
+                          <a href="" class="btn btn-app-image-edit">變更圖片</a>
+                        </div>
+                        <button type="button" class="btn btn-primary btn-block">確認</button>
+                        <hr>
+                        <button type="button" class="btn btn-outline-danger btn-block">移除應用程式</button>
+
+                      </div><!-- /. Property Tab-1: 基本設定 -->
+
+                      <div class="tab-pane fade" id="certManage" role="tabpanel">
+                        <div class="form-group row">
+                          <label for="" class="col-md-12 col-form-label">Token</label>
+                          <div class="input-group col-md-12">
+                            <input type="text" class="form-control" placeholder="">
+                            <div class="input-group-append">
+                              <button class="btn btn-outline-secondary" type="button" id=""><i class="mdi mdi-refresh"></i></button>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="card mb-3 card-service-provider">
+                          <div class="card-header">
+                            <div class="card-header_service-title">APPLE (APNS)</div>
+                            <div class="btn-group btn-group-toggle btn-toggle-switch" data-toggle="buttons">
+                              <label class="btn active">
+                                <input type="radio" name="options" id="option1" autocomplete="off" checked> ON
+                              </label>
+                              <label class="btn">
+                                <input type="radio" name="options" id="option2" autocomplete="off"> OFF
+                              </label>
+                            </div><!-- /.btn-toggle-switch -->
+                          </div>
+                          <div class="card-body">
+                            <div class="form-group row">
+                              <div class="col-12">
+                                <label class="">API Key</label>
+                              </div>
+                              <div class="col-12">
+                                <input type="text" class="form-control" placeholder="">
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label class="col-md-3 col-form-label">上傳憑證</label>
+                              <div class="col">
+                                <div class="custom-file">
+                                  <input type="file" class="custom-file-input" id="customFile">
+                                  <label class="custom-file-label" for="customFile">請選擇檔案</label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label class="col-md-3 col-form-label">憑證密碼</label>
+                              <div class="col">
+                                <input type="text" class="form-control" placeholder="">
+                              </div>
+                            </div>
+                          </div>
+                        </div><!-- /. card-service-provider -->
+
+                        <div class="card mb-3 card-service-provider">
+                          <div class="card-header">
+                            <div class="card-header_service-title">GOOGLE (FCM)</div>
+                            <div class="btn-group btn-group-toggle btn-toggle-switch" data-toggle="buttons">
+                              <label class="btn">
+                                <input type="radio" name="options" id="option1" autocomplete="off" checked> ON
+                              </label>
+                              <label class="btn active">
+                                <input type="radio" name="options" id="option2" autocomplete="off"> OFF
+                              </label>
+                            </div><!-- /.btn-toggle-switch -->
+                          </div>
+                          <div class="card-body">
+                            <div class="form-group row">
+                              <div class="col-12">
+                                <label class="">API Key</label>
+                              </div>
+                              <div class="col-12">
+                                <input type="text" class="form-control" placeholder="">
+                              </div>
+                            </div>
+                          </div>
+                        </div><!-- /. card-service-provider -->
+
+                        <button type="button" class="btn btn-primary btn-block">確認</button>
+                      </div><!-- /. Property Tab-2: 憑證管理 -->
+                      <div class="tab-pane fade" id="usageManage" role="tabpanel">
+                        <div class="form-group row">
+                          <label for="" class="col-md-3 col-form-label">啟用</label>
+                          <div class="col">
+                            <div class="btn-group btn-group-toggle btn-toggle-switch" data-toggle="buttons">
+                              <label class="btn active">
+                                <input type="radio" name="options" id="option1" autocomplete="off" checked> 啟用
+                              </label>
+                              <label class="btn">
+                                <input type="radio" name="options" id="option2" autocomplete="off"> 關閉
+                              </label>
+                            </div><!-- /.btn-toggle-switch -->
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label for="" class="col-md-3 col-form-label">單位</label>
+                          <div class="col">
+                            <div class="btn-group btn-group-toggle btn-toggle-radio" data-toggle="buttons">
+                              <label class="btn active">
+                                <input type="radio" name="options" id="option1" autocomplete="off" checked> 每天
+                              </label>
+                              <label class="btn">
+                                <input type="radio" name="options" id="option2" autocomplete="off"> 每週
+                              </label>
+                              <label class="btn">
+                                <input type="radio" name="options" id="option3" autocomplete="off"> 每月
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label for="" class="col-md-3 col-form-label">推播數量</label>
+                          <div class="col">
+                            <input type="text" class="form-control" placeholder="">
+                          </div>
+                        </div>
+                        <button type="button" class="btn btn-primary btn-block">確認</button>
+                      </div><!-- /. Property Tab-3: 使用量管理 -->
+                    </div>
+
+                    <a href="#" class="btn-close-panel"><i class="mdi mdi-close"></i></a>
+
+                  </div><!-- /.property-wrapper -->
+
+                </div><!-- / .property-panel -->
+
+              </div><!-- /. Tab 1: APP 註冊與設定 -->
+
+              <div class="tab-pane fade" id="history-query" role="tabpanel">
+                TODO: 歷史訊息查詢
+              </div><!-- /. Tab 2: 歷史訊息查詢 -->
+              <div class="tab-pane fade" id="stastic-report" role="tabpanel">
+                TODO: 統計報表
+              </div><!-- /. Tab 3: 統計報表 -->
+
+            </div><!-- /. tab-content -->
+
+          </div><!-- /.PSM_tab_wrapper -->
+
+        </div><!-- /.page-content-wrapper-inner -->
+
+      </div><!-- /.page-content-wrapper -->
+
+    </div><!-- /.page-body -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+
+  </body>
+</html>
