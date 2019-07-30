@@ -10,12 +10,14 @@ $color-success:   #6ACB00;
 $color-fail:      #D0021B;
 $color-delete:    #e00000;
 
-
-
 // Dimensions
 $header-height: 55px; // 上方 navbar
 $sidebar-width: 80px; // 側邊 sidebar
 $propertyPanel-width: 480px;
+
+// Z-indexs
+$header-nav-zindex: 2;
+$property-wrapper-zindex: 9;
 
 
 ////////////////////////////////////////////////////////////////////

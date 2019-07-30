@@ -29,7 +29,7 @@ body {
 	position: fixed;
 	padding: 0 1rem;
 	width: 100%;
-	z-index: 2;
+	z-index: $header-nav-zindex;
 
 	.header-nav-wrap {
 		display: flex;
@@ -186,6 +186,34 @@ body {
 		}
 	}
 }
+// 新增卡片的按鈕
+.btn-add-card {
+	background: linear-gradient(#FFD58E, #E8B869);
+	border: none;
+	border-radius: 60px;
+	color: #eee;
+	display: block;
+	font-family: "Arial black";
+	font-size: 30px;
+	position: fixed;
+	left: 40px;
+	top: 50%;
+	width: 60px;
+	height: 60px;
+	text-align: center;
+	box-shadow: 
+	0 3px 3px 3px rgba(0,0,0,.03),
+	0 1px 3px 1px rgba(0,0,0,.05);
+	transition: .3s;
+	z-index: ($property-wrapper-zindex - 1);	
+	opacity: .7;
+	&:hover {
+		box-shadow: none;
+		color: #fff;
+		opacity: 1;
+		transform: scale(1.1);
+	}
+}
 
 // App Cards
 .card-app {
@@ -305,15 +333,15 @@ body {
 	top: 55px;
 	right: (-$propertyPanel-width);
 	height: calc(100vh - 55px);
-	width: 35%;
+	width: $propertyPanel-width;
 	min-width: $propertyPanel-width;
 	transition: .5s;
-	z-index: 9;
+	z-index: $property-wrapper-zindex;
 	&.open {
 		right: 0;
 		box-shadow: 
-		0 -5px 10px 3px rgba(0,0,0,.05),
-		0 -3px 10px 1px rgba(0,0,0,.07);
+		-5px 0 10px 3px rgba(0,0,0,.05),
+		-3px 0 10px 1px rgba(0,0,0,.07);
 	}
 	.nav-tabs {
 		.nav-link {

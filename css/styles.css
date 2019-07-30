@@ -134,6 +134,30 @@ body {
       color: #fff;
       font-size: 1.5rem; }
 
+.btn-add-card {
+  background: linear-gradient(#FFD58E, #E8B869);
+  border: none;
+  border-radius: 60px;
+  color: #eee;
+  display: block;
+  font-family: "Arial black";
+  font-size: 30px;
+  position: fixed;
+  left: 40px;
+  top: 50%;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  box-shadow: 0 3px 3px 3px rgba(0, 0, 0, 0.03), 0 1px 3px 1px rgba(0, 0, 0, 0.05);
+  transition: .3s;
+  z-index: 8;
+  opacity: .7; }
+  .btn-add-card:hover {
+    box-shadow: none;
+    color: #fff;
+    opacity: 1;
+    transform: scale(1.1); }
+
 .card-app {
   border: none;
   border-radius: .5rem;
@@ -226,13 +250,13 @@ body {
   top: 55px;
   right: -480px;
   height: calc(100vh - 55px);
-  width: 35%;
+  width: 480px;
   min-width: 480px;
   transition: .5s;
   z-index: 9; }
   .property-wrapper.open {
     right: 0;
-    box-shadow: 0 -5px 10px 3px rgba(0, 0, 0, 0.05), 0 -3px 10px 1px rgba(0, 0, 0, 0.07); }
+    box-shadow: -5px 0 10px 3px rgba(0, 0, 0, 0.05), -3px 0 10px 1px rgba(0, 0, 0, 0.07); }
   .property-wrapper .nav-tabs .nav-link {
     border: none;
     color: #666; }
