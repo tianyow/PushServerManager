@@ -343,11 +343,36 @@ body {
 	min-width: $propertyPanel-width;
 	transition: .5s;
 	z-index: $property-wrapper-zindex;
+	&.side-panel-wide {
+		width: 75%;
+		right: -75%;
+	}
 	&.open {
 		right: 0;
 		box-shadow: 
 		-5px 0 10px 3px rgba(0,0,0,.05),
 		-3px 0 10px 1px rgba(0,0,0,.07);
+	}
+}
+.side-panel-wrapper {
+	padding: 0 1.5rem 2rem;
+	position: absolute;
+	top: 24px;
+	right: 0;
+	left: 0;
+	overflow-x: hidden;
+	overflow-y: auto;
+	height: calc(100% - 24px);
+
+	h3 {
+		border-bottom: 3px solid #0f69ff;
+    color: #000;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    padding: .5rem 1rem;
+    text-align: center;
+    width: 33%;
 	}
 }
 .btn-close-panel {
@@ -399,8 +424,109 @@ body {
 		bottom: .8rem;
 	}
 }
+// 1.1 帳號管理 ---------------------------------------------------------- //
+.table-accountRoleManage {
+	background: #eee;
+	font-size: 15px;
+	box-shadow: 
+	0 0.46875rem 2.1875rem rgba(0,0,0,.03), 
+	0 0.9375rem 1.40625rem rgba(0,0,0,.03), 
+	0 0.25rem 0.53125rem rgba(0,0,0,.05), 
+	0 0.125rem 0.1875rem rgba(0,0,0,.03);
+	thead th {
+		background: linear-gradient(45deg,#3D4053, #444D83);
+		border-top: none;
+		color: #fff;
+		padding-top: 8px;
+		padding-bottom: 8px;
+		white-space: nowrap;
+	}
+	tr {
+		&:hover {
+			background: #c9f8ff;
+		}
+	}
+	th, td {
+		vertical-align: middle;
+	}
+	.btn {
+		color: #fff;
+		font-size: 20px;
+		padding: 0 12px;
+	}
+	.btn-account-edit, .btn-role-edit {
+		background: #555;
+	}
+	.btn-pwd-reset, .btn-role-delete {
+		background: $color-delete;
+	}
+}
+.table-role-setting {
+	margin: 0 15px;
+	font-size: 15px;
+	th {
+		background: #ddd;
+	}
+	tr {
+		th, td {
+			&:nth-child(1),
+			&:nth-child(2) {
+				background: #eee;
+				text-align: left;
+			}
+			text-align: center;
+		}
+	}
+	// 角色設定 checkbox
+	input[type="checkbox"] {
+	  position: absolute;
+	  opacity: 0;
 
-// 歷史訊息查詢 ---------------------------------------------------------- //
+	  & + label {
+	    position: relative;
+	    cursor: pointer;
+	    margin-bottom: 0;
+	    padding: 0;
+	  }
+
+	  // Box.
+	  & + label:before {
+	    content: '';
+	    color: #fff;
+	    display: inline-block;
+	    vertical-align: text-top;
+	    width: 18px;
+	    height: 18px;
+	    background: white;
+	    border: 1px solid #bbb;
+	  }
+
+	  // Box hover
+	  &:hover + label:before {
+	    background: #ccc;
+	  }
+	  
+	  // Box checked
+	  &:checked + label:before {
+	    background: $color-success url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAMCAYAAABr5z2BAAAAAXNSR0IArs4c6QAAAOJJREFUKBWdjzEKwkAURI2IYAohIFiksBD0ArZ21pYewNIL2HoBWw9gp6V4AiGdFoIo2ChYWNiIFiIo6/shBrNJ0Djw2L9/ZhbWSP0hpZRFbQKXxHXKJjggchI9QCEDU2miPdg/P0DYgCGITlBxyww5ML+9RKYPoivU/DyXDRyh6i+1Aa8Lojs0AjaLkTjoAKWAyYVdW0z0hJbuS0C+MAPRForvEHMTHiDqvPehEzMPc0mhJVhQhxuIeqGSviBUgLWk0QLO7qTUQM/G3inYsPOKcowhHVuIMiiUYeWVs1GZz90LEP0AByoU3voAAAAASUVORK5CYII=');
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size: 80%;
+	  }
+	}
+	.role-check-status {
+		&.indeterminate {
+			& + label:before {
+		    background: #789e4e url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAACCAYAAABllJ3tAAAAAXNSR0IArs4c6QAAABVJREFUCB1j+P///xYgxgW2MDEQAAAOjh9NWY8S7AAAAABJRU5ErkJggg==');
+				background-position: center center;
+				background-repeat: no-repeat;
+				background-size: 60%;
+			}
+		}
+	}
+}
+
+// 3.2 歷史訊息查詢 ---------------------------------------------------------- //
 .table-historyMsgQuery {
 	background: #eee;
 	font-size: 13px;
@@ -510,27 +636,6 @@ tr.subContentTable_wrap {
 }
 // 歷史訊息搜詢 Panel
 .history-search-panel {
-}
-.history-search-wrapper {
-	padding: 0 1.5rem 2rem;
-	position: absolute;
-	top: 24px;
-	right: 0;
-	left: 0;
-	overflow-x: hidden;
-	overflow-y: auto;
-	height: calc(100% - 24px);
-
-	h3 {
-		border-bottom: 3px solid #0f69ff;
-    color: #000;
-    font-weight: bold;
-    font-size: 1.1rem;
-    margin-bottom: 1rem;
-    padding: .5rem 1rem;
-    text-align: center;
-    width: 33%;
-	}
 }
 
 // 統計報表 ---------------------------------------------------------- //
@@ -648,6 +753,10 @@ select {
 		transform: translateY(-1px);
 	}
 }
+.btn-wide {
+	padding-left: 3rem;
+	padding-right: 3rem;
+}
 // Toggle Switch
 .btn-toggle-switch {
 	.btn {
@@ -728,6 +837,39 @@ select {
 	&.badge-fail {
 		background: $color-fail;
 		color: #eee;
+	}
+}
+
+// Modal
+.popupModal {
+	.modal-content {
+		border-radius: 1px;
+		box-shadow: 
+		0 5px 8px rgba(0,0,0,.05), 
+		0 2px 4px rgba(0,0,0,.03);
+	}
+	.modal-header {
+
+	}
+	.modal-body {
+		padding: 1rem 1rem;
+		text-align: center;
+		i {
+			font-size: 64px;
+		}
+	}
+	.modal-footer {
+		justify-content: center;
+		padding: 0;
+		.btn {
+			flex: 1;
+			border-radius: 0;
+			margin: 0;
+			padding: 12px;
+			&:hover {
+				transform: none;
+			}
+		}
 	}
 }
 

@@ -20,13 +20,13 @@
 
         <ul class="nav">
           <li class="nav-item active">
-            <a class="nav-link" href="#"><i class="mdi mdi-flash-outline"></i> 推播管理</a>
+            <a class="nav-link" href="PNM_1_1.html"><i class="mdi mdi-account-outline"></i> 帳號管理</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><i class="mdi mdi-account-outline"></i> 帳號管理</a>
+            <a class="nav-link" href="PNM_2_1.html"><i class="mdi mdi-dns-outline"></i> 伺服器管理</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><i class="mdi mdi-dns-outline"></i> 伺服器管理</a>
+            <a class="nav-link" href="PNM_3_1.html"><i class="mdi mdi-flash-outline"></i> 推播管理</a>
           </li>
         </ul>
 
@@ -41,7 +41,7 @@
           <div class="dropdown-menu dropdown-menu-right">
             <a class="dropdown-item" href="#"><i class="mdi mdi-account-circle-outline"></i> 使用者設定</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#"><i class="mdi mdi-power-standby"></i> 登出系統</a>
+            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#popupModalLogout"><i class="mdi mdi-power-standby"></i> 登出系統</a>
           </div>
         </div>
       </div><!-- /.logout-wrap -->
@@ -59,895 +59,584 @@
             <div class="PSM-tabs">
               <ul class="nav nav-pills" id="PSM-tab" role="tablist">
                 <li class="nav-item">
-                  <a class="nav-link active" id="PSM-tab-app-setting" data-toggle="pill" href="#app-setting" role="tab">APP 註冊與設定</a>
+                  <a class="nav-link active" id="PSM-tab-account-manage" data-toggle="pill" href="#account-manage" role="tab">帳號管理</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" id="PSM-tab-history-query" data-toggle="pill" href="#history-query" role="tab">歷史訊息查詢</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" id="PSM-tab-stastic-report" data-toggle="pill" href="#stastic-report" role="tab">統計報表</a>
+                  <a class="nav-link" id="PSM-tab-role-manage" data-toggle="pill" href="#role-manage" role="tab">角色管理</a>
                 </li>
               </ul>
-
             </div><!-- /.PSM-tabs -->
 
             <div class="tab-content" id="pills-tabContent">
 
-              <div class="tab-pane fade show active" id="app-setting" role="tabpanel">
-                <!-- 搜尋欄位及按鈕 -->
-                <div class="tabpane_searchWrap">
-                  <div class="input-group">
-                    <input type="text" class="form-control" placeholder="搜尋 APP">
-                    <div class="input-group-append">
-                      <button class="btn" type="button" id=""><i class="mdi mdi-magnify"></i></button>
-                    </div>
-                  </div>
-                </div><!-- /.tabpane_searchWrap -->
-
-                <div class="row">
-                  <div class="col-lg-4 col-md-6">
-                    <div class="card card-app">
-                      <img src="https://placekitten.com/320/200" class="card-img-top" alt="">
-                      <div class="card-body">
-                        <div class="card-app-title">北祥 Worcloud</div>
-                        <div class="card-user-icon-wrapper">
-                          <div class="card-user-icon">北
-                            <!-- <img src="http://placehold.it/64x64" alt=""> -->
-                          </div>
-                        </div>
-                        <div class="card-app-status-wrap">
-                          <div class="row">
-                            <div class="col col-md-4 normal">
-                              <small>今日推播</small>
-                              <div class="app-status-txt">1,234,567</div>
-                            </div>
-                            <div class="col col-md-4 success">
-                              <small>成功</small>
-                              <div class="app-status-txt">1,234,567</div>
-                            </div>
-                            <div class="col col-md-4 fail">
-                              <small>失敗</small>
-                              <div class="app-status-txt">123</div>
-                            </div>
-                          </div>
-                          <div class="row">
-                            <div class="col col-md-4">
-                              <small>今日預約</small>
-                              <div class="app-status-txt">1,234,567</div>
-                            </div>
-                            <div class="col col-md-8">
-                              <small>本月推播</small>
-                              <div class="app-status-txt">1,234,567/1,234,567</div>
-                            </div>
-                          </div>
-                        </div><!-- /.card-app-status-wrap -->
-                      </div>
-                      <a class="btn btn-app-setting" href=""><i class="mdi mdi-settings"></i></a>
-                    </div><!-- /.card-app -->
-                  </div>
-                  <div class="col-lg-4 col-md-6">
-                    <div class="card card-app">
-                      <img src="https://placekitten.com/320/160" class="card-img-top" alt="">
-                      <div class="card-body">
-                        <div class="card-app-title">CSP</div>
-                        <div class="card-user-icon-wrapper">
-                          <div class="card-user-icon">C
-                            <!-- <img src="http://placehold.it/64x64" alt=""> -->
-                          </div>
-                        </div>
-                        <div class="card-app-status-wrap">
-                          <div class="row">
-                            <div class="col col-md-4 normal">
-                              <small>今日推播</small>
-                              <div class="app-status-txt">1,234,567</div>
-                            </div>
-                            <div class="col col-md-4 success">
-                              <small>成功</small>
-                              <div class="app-status-txt">1,234,567</div>
-                            </div>
-                            <div class="col col-md-4 fail">
-                              <small>失敗</small>
-                              <div class="app-status-txt">123</div>
-                            </div>
-                          </div>
-                          <div class="row">
-                            <div class="col col-md-4">
-                              <small>今日預約</small>
-                              <div class="app-status-txt">1,234,567</div>
-                            </div>
-                            <div class="col col-md-8">
-                              <small>本月推播</small>
-                              <div class="app-status-txt">1,234,567/1,234,567</div>
-                            </div>
-                          </div>
-                        </div><!-- /.card-app-status-wrap -->
-                      </div>
-                      <a class="btn btn-app-setting" href=""><i class="mdi mdi-settings"></i></a>
-                    </div><!-- /.card-app -->
-                  </div>
-                  <div class="col-lg-4 col-md-6">
-                    <div class="card card-app">
-                      <img src="https://placekitten.com/320/150" class="card-img-top" alt="">
-                      <div class="card-body">
-                        <div class="card-app-title">SPLA</div>
-                        <div class="card-user-icon-wrapper">
-                          <div class="card-user-icon">S
-                            <!-- <img src="http://placehold.it/64x64" alt=""> -->
-                          </div>
-                        </div>
-                        <div class="card-app-status-wrap">
-                          <div class="row">
-                            <div class="col col-md-4 normal">
-                              <small>今日推播</small>
-                              <div class="app-status-txt">1,234,567</div>
-                            </div>
-                            <div class="col col-md-4 success">
-                              <small>成功</small>
-                              <div class="app-status-txt">1,234,567</div>
-                            </div>
-                            <div class="col col-md-4 fail">
-                              <small>失敗</small>
-                              <div class="app-status-txt">123</div>
-                            </div>
-                          </div>
-                          <div class="row">
-                            <div class="col col-md-4">
-                              <small>今日預約</small>
-                              <div class="app-status-txt">1,234,567</div>
-                            </div>
-                            <div class="col col-md-8">
-                              <small>本月推播</small>
-                              <div class="app-status-txt">1,234,567/1,234,567</div>
-                            </div>
-                          </div>
-                        </div><!-- /.card-app-status-wrap -->
-                      </div>
-                      <a class="btn btn-app-setting" href=""><i class="mdi mdi-settings"></i></a>
-                    </div><!-- /.card-app -->
-                  </div>
-                  <div class="col-lg-4 col-md-6">
-                    <div class="card card-app">
-                      <img src="https://placekitten.com/320/170" class="card-img-top" alt="">
-                      <div class="card-body">
-                        <div class="card-app-title">推播系統</div>
-                        <div class="card-user-icon-wrapper">
-                          <div class="card-user-icon">推
-                            <!-- <img src="http://placehold.it/64x64" alt=""> -->
-                          </div>
-                        </div>
-                        <div class="card-app-status-wrap">
-                          <div class="row">
-                            <div class="col col-md-4 normal">
-                              <small>今日推播</small>
-                              <div class="app-status-txt">1,234,567</div>
-                            </div>
-                            <div class="col col-md-4 success">
-                              <small>成功</small>
-                              <div class="app-status-txt">1,234,567</div>
-                            </div>
-                            <div class="col col-md-4 fail">
-                              <small>失敗</small>
-                              <div class="app-status-txt">123</div>
-                            </div>
-                          </div>
-                          <div class="row">
-                            <div class="col col-md-4">
-                              <small>今日預約</small>
-                              <div class="app-status-txt">1,234,567</div>
-                            </div>
-                            <div class="col col-md-8">
-                              <small>本月推播</small>
-                              <div class="app-status-txt">1,234,567/1,234,567</div>
-                            </div>
-                          </div>
-                        </div><!-- /.card-app-status-wrap -->
-                      </div>
-                      <a class="btn btn-app-setting" href="#"><i class="mdi mdi-settings"></i></a>
-                    </div><!-- /.card-app -->
-                  </div>
-                  <div class="col-lg-4 col-md-6">
-                    <div class="card card-app">
-                      <img src="https://placekitten.com/320/170" class="card-img-top" alt="">
-                      <div class="card-body">
-                        <div class="card-app-title">推播系統</div>
-                        <div class="card-user-icon-wrapper">
-                          <div class="card-user-icon">推
-                            <!-- <img src="http://placehold.it/64x64" alt=""> -->
-                          </div>
-                        </div>
-                        <div class="card-app-status-wrap">
-                          <div class="row">
-                            <div class="col col-md-4 normal">
-                              <small>今日推播</small>
-                              <div class="app-status-txt">1,234,567</div>
-                            </div>
-                            <div class="col col-md-4 success">
-                              <small>成功</small>
-                              <div class="app-status-txt">1,234,567</div>
-                            </div>
-                            <div class="col col-md-4 fail">
-                              <small>失敗</small>
-                              <div class="app-status-txt">123</div>
-                            </div>
-                          </div>
-                          <div class="row">
-                            <div class="col col-md-4">
-                              <small>今日預約</small>
-                              <div class="app-status-txt">1,234,567</div>
-                            </div>
-                            <div class="col col-md-8">
-                              <small>本月推播</small>
-                              <div class="app-status-txt">1,234,567/1,234,567</div>
-                            </div>
-                          </div>
-                        </div><!-- /.card-app-status-wrap -->
-                      </div>
-                      <a class="btn btn-app-setting" href="#"><i class="mdi mdi-settings"></i></a>
-                    </div><!-- /.card-app -->
-                  </div>
-                  <div class="col-lg-4 col-md-6">
-                    <div class="card card-app">
-                      <img src="https://placekitten.com/320/170" class="card-img-top" alt="">
-                      <div class="card-body">
-                        <div class="card-app-title">推播系統</div>
-                        <div class="card-user-icon-wrapper">
-                          <div class="card-user-icon">推
-                            <!-- <img src="http://placehold.it/64x64" alt=""> -->
-                          </div>
-                        </div>
-                        <div class="card-app-status-wrap">
-                          <div class="row">
-                            <div class="col col-md-4 normal">
-                              <small>今日推播</small>
-                              <div class="app-status-txt">1,234,567</div>
-                            </div>
-                            <div class="col col-md-4 success">
-                              <small>成功</small>
-                              <div class="app-status-txt">1,234,567</div>
-                            </div>
-                            <div class="col col-md-4 fail">
-                              <small>失敗</small>
-                              <div class="app-status-txt">123</div>
-                            </div>
-                          </div>
-                          <div class="row">
-                            <div class="col col-md-4">
-                              <small>今日預約</small>
-                              <div class="app-status-txt">1,234,567</div>
-                            </div>
-                            <div class="col col-md-8">
-                              <small>本月推播</small>
-                              <div class="app-status-txt">1,234,567/1,234,567</div>
-                            </div>
-                          </div>
-                        </div><!-- /.card-app-status-wrap -->
-                      </div>
-                      <a class="btn btn-app-setting" href="#"><i class="mdi mdi-settings"></i></a>
-                    </div><!-- /.card-app -->
-                  </div>
-                  <div class="col-lg-4 col-md-6">
-                    <div class="card card-app">
-                      <img src="https://placekitten.com/320/170" class="card-img-top" alt="">
-                      <div class="card-body">
-                        <div class="card-app-title">推播系統</div>
-                        <div class="card-user-icon-wrapper">
-                          <div class="card-user-icon">推
-                            <!-- <img src="http://placehold.it/64x64" alt=""> -->
-                          </div>
-                        </div>
-                        <div class="card-app-status-wrap">
-                          <div class="row">
-                            <div class="col col-md-4 normal">
-                              <small>今日推播</small>
-                              <div class="app-status-txt">1,234,567</div>
-                            </div>
-                            <div class="col col-md-4 success">
-                              <small>成功</small>
-                              <div class="app-status-txt">1,234,567</div>
-                            </div>
-                            <div class="col col-md-4 fail">
-                              <small>失敗</small>
-                              <div class="app-status-txt">123</div>
-                            </div>
-                          </div>
-                          <div class="row">
-                            <div class="col col-md-4">
-                              <small>今日預約</small>
-                              <div class="app-status-txt">1,234,567</div>
-                            </div>
-                            <div class="col col-md-8">
-                              <small>本月推播</small>
-                              <div class="app-status-txt">1,234,567/1,234,567</div>
-                            </div>
-                          </div>
-                        </div><!-- /.card-app-status-wrap -->
-                      </div>
-                      <a class="btn btn-app-setting" href="#"><i class="mdi mdi-settings"></i></a>
-                    </div><!-- /.card-app -->
-                  </div>
-                  <div class="col-lg-4 col-md-6">
-                    <div class="card card-app">
-                      <img src="https://placekitten.com/320/170" class="card-img-top" alt="">
-                      <div class="card-body">
-                        <div class="card-app-title">推播系統</div>
-                        <div class="card-user-icon-wrapper">
-                          <div class="card-user-icon">推
-                            <!-- <img src="http://placehold.it/64x64" alt=""> -->
-                          </div>
-                        </div>
-                        <div class="card-app-status-wrap">
-                          <div class="row">
-                            <div class="col col-md-4 normal">
-                              <small>今日推播</small>
-                              <div class="app-status-txt">1,234,567</div>
-                            </div>
-                            <div class="col col-md-4 success">
-                              <small>成功</small>
-                              <div class="app-status-txt">1,234,567</div>
-                            </div>
-                            <div class="col col-md-4 fail">
-                              <small>失敗</small>
-                              <div class="app-status-txt">123</div>
-                            </div>
-                          </div>
-                          <div class="row">
-                            <div class="col col-md-4">
-                              <small>今日預約</small>
-                              <div class="app-status-txt">1,234,567</div>
-                            </div>
-                            <div class="col col-md-8">
-                              <small>本月推播</small>
-                              <div class="app-status-txt">1,234,567/1,234,567</div>
-                            </div>
-                          </div>
-                        </div><!-- /.card-app-status-wrap -->
-                      </div>
-                      <a class="btn btn-app-setting" href="#"><i class="mdi mdi-settings"></i></a>
-                    </div><!-- /.card-app -->
-                  </div>
-                </div>
-
-                <div class="property-panel side-panel">
-                  <div class="property-wrapper">
-                    <ul class="nav nav-fill nav-line" id="" role="tablist">
-                      <li class="nav-item">
-                        <a class="nav-link active" id="basic-setting-tab" data-toggle="tab" href="#basicSetting" role="tab">基本設定</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" id="cert-manage-tab" data-toggle="tab" href="#certManage" role="tab">憑證管理</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" id="usage-manage-tab" data-toggle="tab" href="#usageManage" role="tab">使用量管理</a>
-                      </li>
-                    </ul>
-                    <div class="tab-content" id="">
-                      <div class="tab-pane fade show active" id="basicSetting" role="tabpanel">
-                        
-                        <div class="form-group row">
-                          <label for="" class="col-md-3 col-form-label">APP 名稱</label>
-                          <div class="col">
-                            <input type="text" class="form-control" id="" placeholder="">
-                          </div>
-                        </div>
-                        <div class="form-group row">
-                          <label for="" class="col-md-3 col-form-label">APP ID</label>
-                          <div class="col">
-                            <input type="text" class="form-control" id="" placeholder="">
-                          </div>
-                        </div>
-                        <div class="form-group row">
-                          <label for="" class="col-md-3 col-form-label">APP 圖示</label>
-                          <div class="col">
-                            <div class="custom-file">
-                              <input type="file" class="custom-file-input" id="customFile">
-                              <label class="custom-file-label" for="customFile">請選擇檔案</label>
-                            </div>
-                            <small>(請盡量上傳 320x200 或等比例的尺寸)</small>
-                          </div>
-                        </div>
-                        <div class="app-image-setting-wrapper">
-                          <img src="https://placekitten.com/320/199" alt="">
-                          <a href="" class="btn btn-app-image-edit">變更圖片</a>
-                        </div>
-                        <button type="button" class="btn btn-primary btn-block">確認</button>
-                        <hr>
-                        <button type="button" class="btn btn-outline-danger btn-block">移除應用程式</button>
-
-                      </div><!-- /. Property Tab-1: 基本設定 -->
-
-                      <div class="tab-pane fade" id="certManage" role="tabpanel">
-                        <div class="form-group row">
-                          <label for="" class="col-md-12 col-form-label">Token</label>
-                          <div class="input-group col-md-12">
-                            <input type="text" class="form-control" placeholder="">
-                            <div class="input-group-append">
-                              <button class="btn btn-outline-secondary" type="button" id=""><i class="mdi mdi-refresh"></i></button>
-                            </div>
-                          </div>
-                        </div>
-
-                        <div class="card mb-3 card-service-provider">
-                          <div class="card-header">
-                            <div class="card-header_service-title">APPLE (APNS)</div>
-                            <div class="btn-group btn-group-toggle btn-toggle-switch" data-toggle="buttons">
-                              <label class="btn active">
-                                <input type="radio" name="options" id="option1" autocomplete="off" checked> ON
-                              </label>
-                              <label class="btn">
-                                <input type="radio" name="options" id="option2" autocomplete="off"> OFF
-                              </label>
-                            </div><!-- /.btn-toggle-switch -->
-                          </div>
-                          <div class="card-body">
-                            <div class="form-group row">
-                              <div class="col-12">
-                                <label class="">API Key</label>
-                              </div>
-                              <div class="col-12">
-                                <input type="text" class="form-control" placeholder="">
-                              </div>
-                            </div>
-                            <div class="form-group row">
-                              <label class="col-md-3 col-form-label">上傳憑證</label>
-                              <div class="col">
-                                <div class="custom-file">
-                                  <input type="file" class="custom-file-input" id="customFile">
-                                  <label class="custom-file-label" for="customFile">請選擇檔案</label>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="form-group row">
-                              <label class="col-md-3 col-form-label">憑證密碼</label>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="">
-                              </div>
-                            </div>
-                          </div>
-                        </div><!-- /. card-service-provider -->
-
-                        <div class="card mb-3 card-service-provider">
-                          <div class="card-header">
-                            <div class="card-header_service-title">GOOGLE (FCM)</div>
-                            <div class="btn-group btn-group-toggle btn-toggle-switch" data-toggle="buttons">
-                              <label class="btn">
-                                <input type="radio" name="options" id="option1" autocomplete="off" checked> ON
-                              </label>
-                              <label class="btn active">
-                                <input type="radio" name="options" id="option2" autocomplete="off"> OFF
-                              </label>
-                            </div><!-- /.btn-toggle-switch -->
-                          </div>
-                          <div class="card-body">
-                            <div class="form-group row">
-                              <div class="col-12">
-                                <label class="">API Key</label>
-                              </div>
-                              <div class="col-12">
-                                <input type="text" class="form-control" placeholder="">
-                              </div>
-                            </div>
-                          </div>
-                        </div><!-- /. card-service-provider -->
-
-                        <button type="button" class="btn btn-primary btn-block">確認</button>
-                      </div><!-- /. Property Tab-2: 憑證管理 -->
-                      <div class="tab-pane fade" id="usageManage" role="tabpanel">
-                        <div class="form-group row">
-                          <label for="" class="col-md-3 col-form-label">啟用</label>
-                          <div class="col">
-                            <div class="btn-group btn-group-toggle btn-toggle-switch" data-toggle="buttons">
-                              <label class="btn active">
-                                <input type="radio" name="options" id="option1" autocomplete="off" checked> 啟用
-                              </label>
-                              <label class="btn">
-                                <input type="radio" name="options" id="option2" autocomplete="off"> 關閉
-                              </label>
-                            </div><!-- /.btn-toggle-switch -->
-                          </div>
-                        </div>
-                        <div class="form-group row">
-                          <label for="" class="col-md-3 col-form-label">單位</label>
-                          <div class="col">
-                            <div class="btn-group btn-group-toggle btn-toggle-radio" data-toggle="buttons">
-                              <label class="btn active">
-                                <input type="radio" name="options" id="option1" autocomplete="off" checked> 每天
-                              </label>
-                              <label class="btn">
-                                <input type="radio" name="options" id="option2" autocomplete="off"> 每週
-                              </label>
-                              <label class="btn">
-                                <input type="radio" name="options" id="option3" autocomplete="off"> 每月
-                              </label>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="form-group row">
-                          <label for="" class="col-md-3 col-form-label">推播數量</label>
-                          <div class="col">
-                            <input type="text" class="form-control" placeholder="">
-                          </div>
-                        </div>
-                        <button type="button" class="btn btn-primary btn-block">確認</button>
-                      </div><!-- /. Property Tab-3: 使用量管理 -->
-                    </div>
-
-                    <a href="#" class="btn-close-panel"><i class="mdi mdi-close"></i></a>
-
-                  </div><!-- /.property-wrapper -->
-
-                </div><!-- / .property-panel -->
-
-                <a href="" class="btn btn-add-card" data-toggle="tooltip" title="新增 APP設定">&plus;</a>
-
-              </div><!-- /. Tab 1: APP 註冊與設定 -->
-
-              <div class="tab-pane fade" id="history-query" role="tabpanel">
+              <div class="tab-pane fade show active" id="account-manage" role="tabpanel">
                 <!-- 搜尋按鈕 -->
                 <div class="tabpane_searchWrap">
-                  <button class="btn btn-history-search-setting" type="button" id=""><i class="mdi mdi-magnify"></i></button>
+                  <button class="btn btn-account-add" type="button" id=""><i class="mdi mdi-account-plus-outline"></i></button>
+                  <button class="btn btn-account-search" type="button" id=""><i class="mdi mdi-magnify"></i></button>
                 </div><!-- /.tabpane_searchWrap -->
 
                 <div class="table-responsive">
-                  <table id="historyMsgQueryTable" class="table table-historyMsgQuery" cellpadding="0" cellspacing="0">
+                  <table id="accountManageTable" class="table table-accountRoleManage" cellpadding="0" cellspacing="0">
                     <thead>
                       <tr>
-                        <th></th>
-                        <th></th>
-                        <th>APP名稱</th>
-                        <th>APP ID</th>
-                        <th>Msg ID</th>
-                        <th>Group ID</th>
-                        <th>訊息內容</th>
-                        <th>Tag</th>
-                        <th>狀態</th>
-                        <th>設備</th>
-                        <th>推播對象</th>
-                        <th>發送時間</th>
-                        <th>已讀取</th>
+                        <th class="text-center" width="50">#</th>
+                        <th>帳號</th>
+                        <th>信箱</th>
+                        <th>權限</th>
+                        <th>角色</th>
+                        <th>建立日期</th>
+                        <th class="text-center" width="60">編輯</th>
+                        <th class="text-center" width="60">重置密碼</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <td class="row-toggle-control"><a href="" class="row-toggle"><i class="mdi mdi-chevron-right"></i></a></td>
-                        <td>1</td>
-                        <td>Facebook</td>
-                        <td>1238468</td>
-                        <td>M13843215</td>
-                        <td>G46327312</td>
-                        <td>您有一封未讀訊息, 您有一封未讀訊息, 您有一封未讀訊息</td>
-                        <td>Msg/person</td>
-                        <td><span class="badge badge-success">成功</span></td>
-                        <td>iOS</td>
-                        <td>Asdf5432zxcv</td>
-                        <td>2019/07/07 09:47</td>
-                        <td><span class="badge badge-read" data-toggle="tooltip" title="總筆數:1,900,000"><i class="mdi mdi-check-all"></i> 20,000</td>
-                      </tr>
-                      <!-- <tr class="subContentTable_wrap">
-                        <td colspan="13">
-                          <table class="subContentTable">
-                            <tr>
-                              <td></td>
-                              <td>已讀</td>
-                              <td>未讀</td>
-                              <td>失敗</td>
-                            </tr>
-                            <tr>
-                              <td>iOS</td>
-                              <td class="success">1,900,000</td>
-                              <td class="success">100,000</td>
-                              <td class="fail">11</td>
-                            </tr>
-                            <tr>
-                              <td>Android</td>
-                              <td class="success">1,800</td>
-                              <td class="success">200</td>
-                              <td class="fail">5</td>
-                            </tr>
-                            <tr class="row-push-total">
-                              <td>總計</td>
-                              <td colspan="3">1,900,000</td>
-                            </tr>
-                          </table>
-                        </td>
-                      </tr> -->
-                      <tr>
-                        <td class="row-toggle-control"><a href="" class="row-toggle"><i class="mdi mdi-chevron-right"></i></a></td>
-                        <td>1</td>
-                        <td>Facebook</td>
-                        <td>1238468</td>
-                        <td>M13843215</td>
-                        <td>G46327312</td>
-                        <td>您有一封未讀訊息</td>
-                        <td>Msg/person</td>
-                        <td><span class="badge badge-success">成功</span></td>
-                        <td>iOS</td>
-                        <td>Asdf5432zxcv</td>
-                        <td>2019/07/07 09:47</td>
-                        <td><span class="badge badge-read" data-toggle="tooltip" title="總筆數:20,000"><i class="mdi mdi-check-all"></i> 1,990</td>
+                        <td class="text-center font-weight-bold">1</td>
+                        <td>JefferyHo</td>
+                        <td>holifung@hotmail.com</td>
+                        <td>Root管理員</td>
+                        <td>Root管理員</td>
+                        <td>2019/08/16</td>
+                        <td class="text-center"><a href="" class="btn btn-account-edit"><i class="mdi mdi-account-edit"></i></a></td>
+                        <td class="text-center"><a href="" class="btn btn-pwd-reset"><i class="mdi mdi-lock-reset"></i></a></td>
                       </tr>
                       <tr>
-                        <td class="row-toggle-control"><a href="" class="row-toggle"><i class="mdi mdi-chevron-right"></i></a></td>
-                        <td>1</td>
-                        <td>Facebook</td>
-                        <td>1238468</td>
-                        <td>M13843215</td>
-                        <td>G46327312</td>
-                        <td>您有一封未讀訊息</td>
-                        <td>Msg/person</td>
-                        <td><span class="badge badge-fail">失敗</span></td>
-                        <td>iOS</td>
-                        <td>Asdf5432zxcv</td>
-                        <td>2019/07/07 09:47</td>
-                        <td><span class="badge badge-read" data-toggle="tooltip" title="總筆數:20,000"><i class="mdi mdi-check-all"></i> 1,990</td>
+                        <td class="text-center font-weight-bold">2</td>
+                        <td>JefferyHo</td>
+                        <td>holifung@hotmail.com</td>
+                        <td>Root管理員</td>
+                        <td>Root管理員</td>
+                        <td>2019/08/16</td>
+                        <td class="text-center"><a href="" class="btn btn-account-edit"><i class="mdi mdi-account-edit"></i></a></td>
+                        <td class="text-center"><a href="" class="btn btn-pwd-reset"><i class="mdi mdi-lock-reset"></i></a></td>
                       </tr>
                       <tr>
-                        <td class="row-toggle-control"><a href="" class="row-toggle"><i class="mdi mdi-chevron-right"></i></a></td>
-                        <td>1</td>
-                        <td>Facebook</td>
-                        <td>1238468</td>
-                        <td>M13843215</td>
-                        <td>G46327312</td>
-                        <td>您有一封未讀訊息, 您有一封未讀訊息, 您有一封未讀訊息, 您有一封未讀訊息, 您有一封未讀訊息, 您有一封未讀訊息</td>
-                        <td>Msg/person</td>
-                        <td><span class="badge badge-success">成功</span></td>
-                        <td>iOS</td>
-                        <td>Asdf5432zxcv</td>
-                        <td>2019/07/07 09:47</td>
-                        <td><span class="badge badge-read" data-toggle="tooltip" title="總筆數:20,000"><i class="mdi mdi-check-all"></i> 1,990</td>
+                        <td class="text-center font-weight-bold">3</td>
+                        <td>JefferyHo</td>
+                        <td>holifung@hotmail.com</td>
+                        <td>Root管理員</td>
+                        <td>Root管理員</td>
+                        <td>2019/08/16</td>
+                        <td class="text-center"><a href="" class="btn btn-account-edit"><i class="mdi mdi-account-edit"></i></a></td>
+                        <td class="text-center"><a href="" class="btn btn-pwd-reset"><i class="mdi mdi-lock-reset"></i></a></td>
                       </tr>
                       <tr>
-                        <td class="row-toggle-control"><a href="" class="row-toggle"><i class="mdi mdi-chevron-right"></i></a></td>
-                        <td>1</td>
-                        <td>Facebook</td>
-                        <td>1238468</td>
-                        <td>M13843215</td>
-                        <td>G46327312</td>
-                        <td>您有一封未讀訊息</td>
-                        <td>Msg/person</td>
-                        <td><span class="badge badge-fail">失敗</span></td>
-                        <td>iOS</td>
-                        <td>Asdf5432zxcv</td>
-                        <td>2019/07/07 09:47</td>
-                        <td><span class="badge badge-read" data-toggle="tooltip" title="總筆數:20,000"><i class="mdi mdi-check-all"></i> 1,990</td>
+                        <td class="text-center font-weight-bold">4</td>
+                        <td>JefferyHo</td>
+                        <td>holifung@hotmail.com</td>
+                        <td>Root管理員</td>
+                        <td>Root管理員</td>
+                        <td>2019/08/16</td>
+                        <td class="text-center"><a href="" class="btn btn-account-edit"><i class="mdi mdi-account-edit"></i></a></td>
+                        <td class="text-center"><a href="" class="btn btn-pwd-reset"><i class="mdi mdi-lock-reset"></i></a></td>
+                      </tr>
+                      <tr>
+                        <td class="text-center font-weight-bold">5</td>
+                        <td>JefferyHo</td>
+                        <td>holifung@hotmail.com</td>
+                        <td>Root管理員</td>
+                        <td>Root管理員</td>
+                        <td>2019/08/16</td>
+                        <td class="text-center"><a href="" class="btn btn-account-edit"><i class="mdi mdi-account-edit"></i></a></td>
+                        <td class="text-center"><a href="" class="btn btn-pwd-reset"><i class="mdi mdi-lock-reset"></i></a></td>
+                      </tr>
+                      <tr>
+                        <td class="text-center font-weight-bold">1</td>
+                        <td>JefferyHo</td>
+                        <td>holifung@hotmail.com</td>
+                        <td>Root管理員</td>
+                        <td>Root管理員</td>
+                        <td>2019/08/16</td>
+                        <td class="text-center"><a href="" class="btn btn-account-edit"><i class="mdi mdi-account-edit"></i></a></td>
+                        <td class="text-center"><a href="" class="btn btn-pwd-reset"><i class="mdi mdi-lock-reset"></i></a></td>
+                      </tr>
+                      <tr>
+                        <td class="text-center font-weight-bold">2</td>
+                        <td>JefferyHo</td>
+                        <td>holifung@hotmail.com</td>
+                        <td>Root管理員</td>
+                        <td>Root管理員</td>
+                        <td>2019/08/16</td>
+                        <td class="text-center"><a href="" class="btn btn-account-edit"><i class="mdi mdi-account-edit"></i></a></td>
+                        <td class="text-center"><a href="" class="btn btn-pwd-reset"><i class="mdi mdi-lock-reset"></i></a></td>
+                      </tr>
+                      <tr>
+                        <td class="text-center font-weight-bold">3</td>
+                        <td>JefferyHo</td>
+                        <td>holifung@hotmail.com</td>
+                        <td>Root管理員</td>
+                        <td>Root管理員</td>
+                        <td>2019/08/16</td>
+                        <td class="text-center"><a href="" class="btn btn-account-edit"><i class="mdi mdi-account-edit"></i></a></td>
+                        <td class="text-center"><a href="" class="btn btn-pwd-reset"><i class="mdi mdi-lock-reset"></i></a></td>
+                      </tr>
+                      <tr>
+                        <td class="text-center font-weight-bold">4</td>
+                        <td>JefferyHo</td>
+                        <td>holifung@hotmail.com</td>
+                        <td>Root管理員</td>
+                        <td>Root管理員</td>
+                        <td>2019/08/16</td>
+                        <td class="text-center"><a href="" class="btn btn-account-edit"><i class="mdi mdi-account-edit"></i></a></td>
+                        <td class="text-center"><a href="" class="btn btn-pwd-reset"><i class="mdi mdi-lock-reset"></i></a></td>
+                      </tr>
+                      <tr>
+                        <td class="text-center font-weight-bold">5</td>
+                        <td>JefferyHo</td>
+                        <td>holifung@hotmail.com</td>
+                        <td>Root管理員</td>
+                        <td>Root管理員</td>
+                        <td>2019/08/16</td>
+                        <td class="text-center"><a href="" class="btn btn-account-edit"><i class="mdi mdi-account-edit"></i></a></td>
+                        <td class="text-center"><a href="" class="btn btn-pwd-reset"><i class="mdi mdi-lock-reset"></i></a></td>
                       </tr>
                     </tbody>
                   </table>
                 </div>
-                <!-- 歷史訊息搜尋條件 Panel -->
-                <div class="history-search-panel side-panel">
-                  <div class="history-search-wrapper">
+                <!-- 帳號搜尋條件 Panel -->
+                <div class="account-search-panel side-panel">
+                  <div class="side-panel-wrapper">
                     <div class="panel-content">
                       <h3>搜尋</h3>
                       <div class="form-group row">
-                        <label for="" class="col-md-3 col-form-label">名稱</label>
+                        <label for="" class="col-md-3 col-form-label">帳號</label>
                         <div class="col">
                           <input type="text" class="form-control" id="" placeholder="">
                         </div>
                       </div>
                       <div class="form-group row">
-                        <label for="" class="col-md-3 col-form-label">APP ID</label>
-                        <div class="col">
-                          <input type="text" class="form-control" id="" placeholder="">
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label for="" class="col-md-3 col-form-label">Mag ID</label>
-                        <div class="col">
-                          <input type="text" class="form-control" id="" placeholder="">
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label for="" class="col-md-3 col-form-label">Group ID</label>
-                        <div class="col">
-                          <input type="text" class="form-control" id="" placeholder="">
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label for="" class="col-md-3 col-form-label">Tag</label>
-                        <div class="col">
-                          <input type="text" class="form-control" id="" placeholder="">
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label for="" class="col-md-3 col-form-label">狀態</label>
+                        <label for="" class="col-md-3 col-form-label">權限</label>
                         <div class="col">
                           <div class="btn-group-toggle btn-toggle-checkbox" data-toggle="buttons">
                             <label class="btn active">
-                              <input type="checkbox" checked>成功
+                              <input type="checkbox" checked>Root管理員
                             </label>
                             <label class="btn">
-                              <input type="checkbox">失敗
-                            </label>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label for="" class="col-md-3 col-form-label">推播</label>
-                        <div class="col">
-                          <div class="btn-group-toggle btn-toggle-checkbox" data-toggle="buttons">
-                            <label class="btn active">
-                              <input type="checkbox" checked>已推播
+                              <input type="checkbox">AP管理員
                             </label>
                             <label class="btn">
-                              <input type="checkbox">預約
+                              <input type="checkbox">AP使用者
                             </label>
                           </div>
                         </div>
                       </div>
                       <div class="form-group row">
-                        <label for="" class="col-md-3 col-form-label">推播設備</label>
+                        <label for="" class="col-md-3 col-form-label">角色</label>
                         <div class="col">
-                          <div class="btn-group-toggle btn-toggle-checkbox" data-toggle="buttons">
-                            <label class="btn active">
-                              <input type="checkbox" checked>iOS
-                            </label>
-                            <label class="btn">
-                              <input type="checkbox">Android
-                            </label>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label for="" class="col-md-3 col-form-label">推播對象</label>
-                        <div class="col">
-                          <input type="text" class="form-control" id="" placeholder="">
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label for="" class="col-md-3 col-form-label">發送時間</label>
-                        <div class="col">
-                          <div class="input-group">
-                            <input type="text" class="form-control datepicker">
-                            <input type="text" class="form-control datepicker">
-                          </div>
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label for="" class="col-md-3 col-form-label">讀取</label>
-                        <div class="col">
-                          <div class="btn-group-toggle btn-toggle-checkbox" data-toggle="buttons">
-                            <label class="btn active">
-                              <input type="checkbox" checked> 已讀取
-                            </label>
-                            <label class="btn">
-                              <input type="checkbox"> 未讀取
-                            </label>
-                          </div>
+                          <select class="form-control" name="" id="">
+                            <option value="">Root 管理員</option>
+                            <option value="">社群管理員</option>
+                            <option value="">優惠管理員</option>
+                          </select>
                         </div>
                       </div>
                       <button type="button" class="btn btn-primary btn-block"><i class="mdi mdi-magnify"></i> 查詢</button>
                     </div><!-- /.panel-content -->
                     
-                  </div><!-- /.history-search-wrapper -->
+                  </div><!-- /.side-panel-wrapper -->
                   <a href="#" class="btn-close-panel"><i class="mdi mdi-close"></i></a>
+                </div><!-- / .account-search-panel -->
 
-                </div><!-- / .history-search-panel -->
+                <!-- 新增帳號 Panel -->
+                <div class="account-add-panel side-panel">
+                  <div class="side-panel-wrapper">
+                    <div class="panel-content">
+                      <h3>新增帳號</h3>
+                      <div class="form-group row">
+                        <label for="" class="col-md-3 col-form-label">帳號</label>
+                        <div class="col">
+                          <input type="text" class="form-control" id="" placeholder="">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="" class="col-md-3 col-form-label">信箱</label>
+                        <div class="col">
+                          <input type="text" class="form-control" id="" placeholder="">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="" class="col-md-3 col-form-label">權限</label>
+                        <div class="col">
+                          <div class="btn-group-toggle btn-toggle-radio" data-toggle="buttons">
+                            <label class="btn active">
+                              <input type="radio" checked>Root管理員
+                            </label>
+                            <label class="btn">
+                              <input type="radio">AP管理員
+                            </label>
+                            <label class="btn">
+                              <input type="radio">AP使用者
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="" class="col-md-3 col-form-label">角色</label>
+                        <div class="col">
+                          <select class="form-control" name="" id="">
+                            <option value="">Root 管理員</option>
+                            <option value="">社群管理員</option>
+                            <option value="">優惠管理員</option>
+                          </select>
+                        </div>
+                      </div>
+                      <button type="button" class="btn btn-primary btn-block"><i class="mdi mdi-check-bold"></i> 確認</button>
+                    </div><!-- /.panel-content -->
+                    
+                  </div><!-- /.side-panel-wrapper -->
+                  <a href="#" class="btn-close-panel"><i class="mdi mdi-close"></i></a>
+                </div><!-- / .account-add-panel -->
 
-              </div><!-- /. Tab 2: 歷史訊息查詢 -->
+                <!-- 編輯帳號 Panel -->
+                <div class="account-edit-panel side-panel">
+                  <div class="side-panel-wrapper">
+                    <div class="panel-content">
+                      <h3>編輯帳號</h3>
+                      <div class="form-group row">
+                        <label for="" class="col-md-3 col-form-label">帳號</label>
+                        <div class="col">
+                          <input type="text" class="form-control" id="" placeholder="" value="JefferyHo">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="" class="col-md-3 col-form-label">信箱</label>
+                        <div class="col">
+                          <input type="text" class="form-control" id="" placeholder="" value="holifung@hotmail.com">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="" class="col-md-3 col-form-label">權限</label>
+                        <div class="col">
+                          <div class="btn-group-toggle btn-toggle-radio" data-toggle="buttons">
+                            <label class="btn active">
+                              <input type="radio" checked>Root管理員
+                            </label>
+                            <label class="btn">
+                              <input type="radio">AP管理員
+                            </label>
+                            <label class="btn">
+                              <input type="radio">AP使用者
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="" class="col-md-3 col-form-label">角色</label>
+                        <div class="col">
+                          <select class="form-control" name="" id="">
+                            <option value="">Root 管理員</option>
+                            <option value="">社群管理員</option>
+                            <option value="">優惠管理員</option>
+                          </select>
+                        </div>
+                      </div>
+                      <button type="button" class="btn btn-primary btn-block"><i class="mdi mdi-check-bold"></i> 確認</button>
+                    </div><!-- /.panel-content -->
+                    
+                  </div><!-- /.side-panel-wrapper -->
+                  <a href="#" class="btn-close-panel"><i class="mdi mdi-close"></i></a>
+                </div><!-- / .account-edit-panel -->
 
-              <div class="tab-pane fade" id="stastic-report" role="tabpanel">
+              </div><!-- /. Tab 1: 帳號管理 -->
+
+              <div class="tab-pane fade" id="role-manage" role="tabpanel">
+                
                 <!-- 搜尋按鈕 -->
                 <div class="tabpane_searchWrap">
-                  <button class="btn btn-stastic-query" type="button" id=""><i class="mdi mdi-magnify"></i></button>
+                  <button class="btn btn-role-add" type="button" id=""><i class="mdi mdi-account-plus-outline"></i></button>
+                  <button class="btn btn-role-search" type="button" id=""><i class="mdi mdi-magnify"></i></button>
                 </div><!-- /.tabpane_searchWrap -->
-                
-                <div class="stasticReport-wrap">
-                  
-                  <div class="stasticReport-tab">
-                    <ul class="nav nav-line" id="" role="tablist">
-                      <li class="nav-item">
-                        <a class="nav-link active" id="" data-toggle="tab" href="#push-times" role="tab">推播次數統計</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" id="" data-toggle="tab" href="#push-percentage" role="tab">推播比例統計</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" id="" data-toggle="tab" href="#push-peak" role="tab">服務尖峰統計</a>
-                      </li>
-                    </ul>
-                    <div class="tab-content" id="">
-                      <div class="tab-pane fade show active" id="push-times" role="tabpanel">
-                        <img src="http://placehold.it/800x600" alt="">
-                      </div>
-                      <div class="tab-pane fade" id="push-percentage" role="tabpanel">
-                        <img src="http://placehold.it/800x600" alt="">
-                      </div>
-                      <div class="tab-pane fade" id="push-peak" role="tabpanel">
-                        <img src="http://placehold.it/800x600" alt="">
-                      </div>
-                    </div>
-                  </div>
 
-                </div><!-- /.stasticReport-wrap -->
-
-                 <!-- 歷史訊息搜尋條件 Panel -->
-                <div class="stastic-report-panel side-panel">
-                  <div class="history-search-wrapper">
+                <div class="table-responsive">
+                  <table id="roleManageTable" class="table table-accountRoleManage" cellpadding="0" cellspacing="0">
+                    <thead>
+                      <tr>
+                        <th class="text-center" width="50">#</th>
+                        <th>角色</th>
+                        <th>權限</th>
+                        <th>建立日期</th>
+                        <th class="text-center" width="60">編輯</th>
+                        <th class="text-center" width="60">刪除</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="text-center font-weight-bold">1</td>
+                        <td>社群管理員</td>
+                        <td>AP管理員</td>
+                        <td>2019/08/16</td>
+                        <td class="text-center"><a href="" class="btn btn-role-edit"><i class="mdi mdi-account-edit"></i></a></td>
+                        <td class="text-center"><a href="" class="btn btn-role-delete"><i class="mdi mdi-delete"></i></a></td>
+                      </tr>
+                      <tr>
+                        <td class="text-center font-weight-bold">1</td>
+                        <td>社群管理員</td>
+                        <td>AP管理員</td>
+                        <td>2019/08/16</td>
+                        <td class="text-center"><a href="" class="btn btn-role-edit"><i class="mdi mdi-account-edit"></i></a></td>
+                        <td class="text-center"><a href="" class="btn btn-role-delete"><i class="mdi mdi-delete"></i></a></td>
+                      </tr>
+                      <tr>
+                        <td class="text-center font-weight-bold">2</td>
+                        <td>社群管理員</td>
+                        <td>AP管理員</td>
+                        <td>2019/08/16</td>
+                        <td class="text-center"><a href="" class="btn btn-role-edit"><i class="mdi mdi-account-edit"></i></a></td>
+                        <td class="text-center"><a href="" class="btn btn-role-delete"><i class="mdi mdi-delete"></i></a></td>
+                      </tr>
+                      <tr>
+                        <td class="text-center font-weight-bold">3</td>
+                        <td>社群管理員</td>
+                        <td>AP管理員</td>
+                        <td>2019/08/16</td>
+                        <td class="text-center"><a href="" class="btn btn-role-edit"><i class="mdi mdi-account-edit"></i></a></td>
+                        <td class="text-center"><a href="" class="btn btn-role-delete"><i class="mdi mdi-delete"></i></a></td>
+                      </tr>
+                      <tr>
+                        <td class="text-center font-weight-bold">4</td>
+                        <td>社群管理員</td>
+                        <td>AP管理員</td>
+                        <td>2019/08/16</td>
+                        <td class="text-center"><a href="" class="btn btn-role-edit"><i class="mdi mdi-account-edit"></i></a></td>
+                        <td class="text-center"><a href="" class="btn btn-role-delete"><i class="mdi mdi-delete"></i></a></td>
+                      </tr>
+                      <tr>
+                        <td class="text-center font-weight-bold">5</td>
+                        <td>社群管理員</td>
+                        <td>AP管理員</td>
+                        <td>2019/08/16</td>
+                        <td class="text-center"><a href="" class="btn btn-role-edit"><i class="mdi mdi-account-edit"></i></a></td>
+                        <td class="text-center"><a href="" class="btn btn-role-delete"><i class="mdi mdi-delete"></i></a></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!-- 角色搜尋條件 Panel -->
+                <div class="role-search-panel side-panel">
+                  <div class="side-panel-wrapper">
                     <div class="panel-content">
+                      <h3>搜尋</h3>
                       <div class="form-group row">
-                        <div class="col-md-6">
-                          <label for=""><small>開始時間</small></label>
-                          <input type="text" class="form-control datepicker">
-                        </div>
-                        <div class="col-md-6">
-                          <label for=""><small>結束時間</small></label>
-                          <input type="text" class="form-control datepicker">
-                        </div>
-                      </div>
-                      <hr>
-                      <ul class="nav nav-fill nav-line" id="" role="tablist">
-                        <li class="nav-item">
-                          <a class="nav-link active" id="" data-toggle="tab" href="#filterByApp" role="tab">APP 篩選</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" id="" data-toggle="tab" href="#filterByTag" role="tab">Tag 篩選</a>
-                        </li>
-                      </ul>
-                      <div class="tab-content" id="pills-tabContent">
-                        <div class="tab-pane fade show active" id="filterByApp" role="tabpanel">
-                          <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="">
-                            <div class="input-group-append">
-                              <button class="btn btn-outline-secondary" type="button"><i class="mdi mdi-magnify"></i></button>
-                            </div>
-                          </div>
-                          <ul class="condition-list-group">
-                            <li>
-                              <input type="checkbox" value="" id="defaultCheck1">
-                              <label for="defaultCheck1">Facebook</label>
-                            </li>
-                            <li>
-                              <input type="checkbox" value="" id="defaultCheck2">
-                              <label for="defaultCheck2">Worcloud</label>
-                            </li>
-                            <li>
-                              <input type="checkbox" value="" id="defaultCheck3">
-                              <label for="defaultCheck3">LINE</label>
-                            </li>
-                            <li>
-                              <input type="checkbox" value="" id="defaultCheck4">
-                              <label for="defaultCheck4">PSC</label>
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="tab-pane fade" id="filterByTag" role="tabpanel">
-                          <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="">
-                            <div class="input-group-append">
-                              <button class="btn btn-outline-secondary" type="button"><i class="mdi mdi-magnify"></i></button>
-                            </div>
-                          </div>
-                          <ul class="condition-list-group">
-                            <li>
-                              <input type="checkbox" value="" id="defaultCheck5">
-                              <label for="defaultCheck5">Google</label>
-                            </li>
-                            <li>
-                              <input type="checkbox" value="" id="defaultCheck6">
-                              <label for="defaultCheck6">YAHOO</label>
-                            </li>
-                            <li>
-                              <input type="checkbox" value="" id="defaultCheck7">
-                              <label for="defaultCheck7">Wechat</label>
-                            </li>
-                            <li>
-                              <input type="checkbox" value="" id="defaultCheck8">
-                              <label for="defaultCheck8">PSC</label>
-                            </li>
-                          </ul>
+                        <label for="" class="col-md-3 col-form-label">角色</label>
+                        <div class="col">
+                          <select class="form-control" name="" id="">
+                            <option value="">Root 管理員</option>
+                            <option value="">社群管理員</option>
+                            <option value="">優惠管理員</option>
+                          </select>
                         </div>
                       </div>
-
-
+                      <div class="form-group row">
+                        <label for="" class="col-md-3 col-form-label">權限</label>
+                        <div class="col">
+                          <div class="btn-group-toggle btn-toggle-checkbox" data-toggle="buttons">
+                            <label class="btn active">
+                              <input type="checkbox" checked>Root管理員
+                            </label>
+                            <label class="btn">
+                              <input type="checkbox">AP管理員
+                            </label>
+                            <label class="btn">
+                              <input type="checkbox">AP使用者
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      
                       <button type="button" class="btn btn-primary btn-block"><i class="mdi mdi-magnify"></i> 查詢</button>
                     </div><!-- /.panel-content -->
                     
-                  </div><!-- /.history-search-wrapper -->
+                  </div><!-- /.side-panel-wrapper -->
                   <a href="#" class="btn-close-panel"><i class="mdi mdi-close"></i></a>
+                </div><!-- / .account-search-panel -->
 
-                </div><!-- / .history-search-panel -->
+                <!-- 新增角色 Panel -->
+                <div class="role-add-panel side-panel side-panel-wide">
+                  <div class="side-panel-wrapper">
+                    <div class="panel-content">
+                      <h3>新增角色</h3>
+                      <div class="form-group row">
+                        <div class="col-md-1">
+                          <label for="" class="col-form-label">角色</label>
+                        </div>
+                        <div class="col-md-4">
+                          <input type="text" class="form-control" id="" placeholder="">
+                        </div>
+                        <div class="col-md-1">
+                          <label for="" class="col-form-label">權限</label>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="btn-group-toggle btn-toggle-radio" data-toggle="buttons">
+                            <label class="btn active">
+                              <input type="radio" checked>Root管理員
+                            </label>
+                            <label class="btn">
+                              <input type="radio">AP管理員
+                            </label>
+                            <label class="btn">
+                              <input type="radio">AP使用者
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <table class="table table-role-setting">
+                          <tr>
+                            <th width="32"></th>
+                            <th>APP名稱</th>
+                            <th>APP註冊與設定</th>
+                            <th>歷史訊息查詢</th>
+                            <th>統計報表</th>
+                            <th>訊息推播</th>
+                          </tr>
+                          <tr>
+                            <td><input id="checkbox1-1" class="role-check-status" type="checkbox" checked><label for="checkbox1-1"></label></td>
+                            <td>XX行動銀行</td>
+                            <td><input id="checkbox1-2" type="checkbox" checked><label for="checkbox1-2"></label></td>
+                            <td><input id="checkbox1-3" type="checkbox" checked><label for="checkbox1-3"></label></td>
+                            <td><input id="checkbox1-4" type="checkbox" checked><label for="checkbox1-4"></label></td>
+                            <td><input id="checkbox1-5" type="checkbox" checked><label for="checkbox1-5"></label></td>
+                          </tr>
+                          <tr>
+                            <td><input id="checkbox2-1" class="role-check-status indeterminate" type="checkbox"><label for="checkbox2-1"></label></td>
+                            <td>信用卡優惠</td>
+                            <td><input id="checkbox2-2" type="checkbox"><label for="checkbox2-2"></label></td>
+                            <td><input id="checkbox2-3" type="checkbox" checked><label for="checkbox2-3"></label></td>
+                            <td><input id="checkbox2-4" type="checkbox"><label for="checkbox2-4"></label></td>
+                            <td><input id="checkbox2-5" type="checkbox" checked><label for="checkbox2-5"></label></td>
+                          </tr>
+                          <tr>
+                            <td><input id="checkbox3-1" class="role-check-status" type="checkbox"><label for="checkbox3-1"></label></td>
+                            <td>XX錢包</td>
+                            <td><input id="checkbox3-2" type="checkbox"><label for="checkbox3-2"></label></td>
+                            <td><input id="checkbox3-3" type="checkbox"><label for="checkbox3-3"></label></td>
+                            <td><input id="checkbox3-4" type="checkbox"><label for="checkbox3-4"></label></td>
+                            <td><input id="checkbox3-5" type="checkbox"><label for="checkbox3-5"></label></td>
+                          </tr>
+                          <tr>
+                            <td><input id="checkbox4-1" class="role-check-status indeterminate" type="checkbox"><label for="checkbox4-1"></label></td>
+                            <td>XX生活家</td>
+                            <td><input id="checkbox4-2" type="checkbox"><label for="checkbox4-2"></label></td>
+                            <td><input id="checkbox4-3" type="checkbox"><label for="checkbox4-3"></label></td>
+                            <td><input id="checkbox4-4" type="checkbox" checked><label for="checkbox4-4"></label></td>
+                            <td><input id="checkbox4-5" type="checkbox"><label for="checkbox4-5"></label></td>
+                          </tr>
+                          <tr>
+                            <td><input id="checkbox5-1" class="role-check-status" type="checkbox"><label for="checkbox5-1"></label></td>
+                            <td>XX下單</td>
+                            <td><input id="checkbox5-2" type="checkbox"><label for="checkbox5-2"></label></td>
+                            <td><input id="checkbox5-3" type="checkbox"><label for="checkbox5-3"></label></td>
+                            <td><input id="checkbox5-4" type="checkbox"><label for="checkbox5-4"></label></td>
+                            <td><input id="checkbox5-5" type="checkbox"><label for="checkbox5-5"></label></td>
+                          </tr>
+                        </table>
+                      </div>
 
-              </div><!-- /. Tab 3: 統計報表 -->
+                      <div class="text-center">
+                        <button type="button" class="btn btn-primary btn-wide"><i class="mdi mdi-check-bold"></i> 確認</button>
+                      </div>
+
+                    </div><!-- /.panel-content -->
+                    
+                  </div><!-- /.side-panel-wrapper -->
+                  <a href="#" class="btn-close-panel"><i class="mdi mdi-close"></i></a>
+                </div><!-- / .role-add-panel -->
+
+                <!-- 編輯帳號 Panel -->
+                <div class="role-edit-panel side-panel side-panel-wide">
+                  <div class="side-panel-wrapper">
+                    <div class="panel-content">
+                      <h3>編輯角色</h3>
+                      <div class="form-group row">
+                        <div class="col-md-1">
+                          <label for="" class="col-form-label">角色</label>
+                        </div>
+                        <div class="col-md-4">
+                          <input type="text" class="form-control" id="" placeholder="" value="社群管理員">
+                        </div>
+                        <div class="col-md-1">
+                          <label for="" class="col-form-label">權限</label>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="btn-group-toggle btn-toggle-radio" data-toggle="buttons">
+                            <label class="btn active">
+                              <input type="radio" checked>Root管理員
+                            </label>
+                            <label class="btn">
+                              <input type="radio">AP管理員
+                            </label>
+                            <label class="btn">
+                              <input type="radio">AP使用者
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <table class="table table-role-setting">
+                          <tr>
+                            <th width="32"></th>
+                            <th>APP名稱</th>
+                            <th>APP註冊與設定</th>
+                            <th>歷史訊息查詢</th>
+                            <th>統計報表</th>
+                            <th>訊息推播</th>
+                          </tr>
+                          <tr>
+                            <td><input id="checkbox1-1" class="role-check-status" type="checkbox" checked><label for="checkbox1-1"></label></td>
+                            <td>XX行動銀行</td>
+                            <td><input id="checkbox1-2" type="checkbox" checked><label for="checkbox1-2"></label></td>
+                            <td><input id="checkbox1-3" type="checkbox" checked><label for="checkbox1-3"></label></td>
+                            <td><input id="checkbox1-4" type="checkbox" checked><label for="checkbox1-4"></label></td>
+                            <td><input id="checkbox1-5" type="checkbox" checked><label for="checkbox1-5"></label></td>
+                          </tr>
+                          <tr>
+                            <td><input id="checkbox2-1" class="role-check-status indeterminate" type="checkbox"><label for="checkbox2-1"></label></td>
+                            <td>信用卡優惠</td>
+                            <td><input id="checkbox2-2" type="checkbox"><label for="checkbox2-2"></label></td>
+                            <td><input id="checkbox2-3" type="checkbox" checked><label for="checkbox2-3"></label></td>
+                            <td><input id="checkbox2-4" type="checkbox"><label for="checkbox2-4"></label></td>
+                            <td><input id="checkbox2-5" type="checkbox" checked><label for="checkbox2-5"></label></td>
+                          </tr>
+                          <tr>
+                            <td><input id="checkbox3-1" class="role-check-status" type="checkbox"><label for="checkbox3-1"></label></td>
+                            <td>XX錢包</td>
+                            <td><input id="checkbox3-2" type="checkbox"><label for="checkbox3-2"></label></td>
+                            <td><input id="checkbox3-3" type="checkbox"><label for="checkbox3-3"></label></td>
+                            <td><input id="checkbox3-4" type="checkbox"><label for="checkbox3-4"></label></td>
+                            <td><input id="checkbox3-5" type="checkbox"><label for="checkbox3-5"></label></td>
+                          </tr>
+                          <tr>
+                            <td><input id="checkbox4-1" class="role-check-status indeterminate" type="checkbox"><label for="checkbox4-1"></label></td>
+                            <td>XX生活家</td>
+                            <td><input id="checkbox4-2" type="checkbox"><label for="checkbox4-2"></label></td>
+                            <td><input id="checkbox4-3" type="checkbox"><label for="checkbox4-3"></label></td>
+                            <td><input id="checkbox4-4" type="checkbox" checked><label for="checkbox4-4"></label></td>
+                            <td><input id="checkbox4-5" type="checkbox"><label for="checkbox4-5"></label></td>
+                          </tr>
+                          <tr>
+                            <td><input id="checkbox5-1" class="role-check-status" type="checkbox"><label for="checkbox5-1"></label></td>
+                            <td>XX下單</td>
+                            <td><input id="checkbox5-2" type="checkbox"><label for="checkbox5-2"></label></td>
+                            <td><input id="checkbox5-3" type="checkbox"><label for="checkbox5-3"></label></td>
+                            <td><input id="checkbox5-4" type="checkbox"><label for="checkbox5-4"></label></td>
+                            <td><input id="checkbox5-5" type="checkbox"><label for="checkbox5-5"></label></td>
+                          </tr>
+                        </table>
+                      </div>
+
+                      <div class="text-center">
+                        <button type="button" class="btn btn-primary btn-wide"><i class="mdi mdi-check-bold"></i> 確認</button>
+                      </div>
+                      
+
+                    </div><!-- /.panel-content -->
+                    
+                  </div><!-- /.side-panel-wrapper -->
+                  <a href="#" class="btn-close-panel"><i class="mdi mdi-close"></i></a>
+                </div><!-- / .role-edit-panel -->
+
+              </div><!-- /. Tab 2: 角色管理 -->
 
             </div><!-- /. tab-content -->
 
@@ -956,6 +645,24 @@
           </div><!-- /.PSM_tab_wrapper -->
 
         </div><!-- /.page-content-wrapper-inner -->
+
+        <!-- Modal -->
+        <div class="modal fade popupModal" id="popupModalLogout" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered modal-sm">
+            <div class="modal-content">
+              <!-- <div class="modal-header"></div> -->
+              <div class="modal-body">
+                <i class="mdi mdi-alert-octagon-outline text-danger"></i>
+                <p>確定要登出?</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary"><i class="mdi mdi-check-bold"></i> 確定</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end of Modal -->
 
       </div><!-- /.page-content-wrapper -->
 

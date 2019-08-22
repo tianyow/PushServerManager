@@ -9,6 +9,43 @@ $(function () {
   	$('.custom-file-label').html(fileName);
   });
 
+  // 新增帳號 toggle
+  $('.btn-account-add').click(function(e){
+  	e.preventDefault();
+  	$('.account-add-panel.side-panel').toggleClass('open');
+  	$('.panel-mask').show();
+  });
+  // 查詢帳號 toggle
+  $('.btn-account-search').click(function(e){
+  	e.preventDefault();
+  	$('.account-search-panel.side-panel').toggleClass('open');
+  	$('.panel-mask').show();
+  });
+  // 編輯帳號 toggle
+  $('.btn-account-edit').click(function(e){
+  	e.preventDefault();
+  	$('.account-edit-panel.side-panel').toggleClass('open');
+  	$('.panel-mask').show();
+  });
+  // 新增角色 toggle
+  $('.btn-role-add').click(function(e){
+  	e.preventDefault();
+  	$('.role-add-panel.side-panel').toggleClass('open');
+  	$('.panel-mask').show();
+  });
+  // 查詢角色 toggle
+  $('.btn-role-search').click(function(e){
+  	e.preventDefault();
+  	$('.role-search-panel.side-panel').toggleClass('open');
+  	$('.panel-mask').show();
+  });
+  // 編輯角色 toggle
+  $('.btn-role-edit').click(function(e){
+  	e.preventDefault();
+  	$('.role-edit-panel.side-panel').toggleClass('open');
+  	$('.panel-mask').show();
+  });
+
   // App 註冊與設定 toggle
   $('.btn-app-setting').click(function(e){
   	e.preventDefault();

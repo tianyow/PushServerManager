@@ -264,9 +264,31 @@ body {
   min-width: 480px;
   transition: .5s;
   z-index: 9; }
+  .side-panel.side-panel-wide {
+    width: 75%;
+    right: -75%; }
   .side-panel.open {
     right: 0;
     box-shadow: -5px 0 10px 3px rgba(0, 0, 0, 0.05), -3px 0 10px 1px rgba(0, 0, 0, 0.07); }
+
+.side-panel-wrapper {
+  padding: 0 1.5rem 2rem;
+  position: absolute;
+  top: 24px;
+  right: 0;
+  left: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: calc(100% - 24px); }
+  .side-panel-wrapper h3 {
+    border-bottom: 3px solid #0f69ff;
+    color: #000;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    padding: .5rem 1rem;
+    text-align: center;
+    width: 33%; }
 
 .btn-close-panel {
   background: #eee;
@@ -309,6 +331,70 @@ body {
     position: absolute;
     right: .8rem;
     bottom: .8rem; }
+
+.table-accountRoleManage {
+  background: #eee;
+  font-size: 15px;
+  box-shadow: 0 0.46875rem 2.1875rem rgba(0, 0, 0, 0.03), 0 0.9375rem 1.40625rem rgba(0, 0, 0, 0.03), 0 0.25rem 0.53125rem rgba(0, 0, 0, 0.05), 0 0.125rem 0.1875rem rgba(0, 0, 0, 0.03); }
+  .table-accountRoleManage thead th {
+    background: linear-gradient(45deg, #3D4053, #444D83);
+    border-top: none;
+    color: #fff;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    white-space: nowrap; }
+  .table-accountRoleManage tr:hover {
+    background: #c9f8ff; }
+  .table-accountRoleManage th, .table-accountRoleManage td {
+    vertical-align: middle; }
+  .table-accountRoleManage .btn {
+    color: #fff;
+    font-size: 20px;
+    padding: 0 12px; }
+  .table-accountRoleManage .btn-account-edit, .table-accountRoleManage .btn-role-edit {
+    background: #555; }
+  .table-accountRoleManage .btn-pwd-reset, .table-accountRoleManage .btn-role-delete {
+    background: #e00000; }
+
+.table-role-setting {
+  margin: 0 15px;
+  font-size: 15px; }
+  .table-role-setting th {
+    background: #ddd; }
+  .table-role-setting tr th, .table-role-setting tr td {
+    text-align: center; }
+    .table-role-setting tr th:nth-child(1), .table-role-setting tr th:nth-child(2), .table-role-setting tr td:nth-child(1), .table-role-setting tr td:nth-child(2) {
+      background: #eee;
+      text-align: left; }
+  .table-role-setting input[type="checkbox"] {
+    position: absolute;
+    opacity: 0; }
+    .table-role-setting input[type="checkbox"] + label {
+      position: relative;
+      cursor: pointer;
+      margin-bottom: 0;
+      padding: 0; }
+    .table-role-setting input[type="checkbox"] + label:before {
+      content: '';
+      color: #fff;
+      display: inline-block;
+      vertical-align: text-top;
+      width: 18px;
+      height: 18px;
+      background: white;
+      border: 1px solid #bbb; }
+    .table-role-setting input[type="checkbox"]:hover + label:before {
+      background: #ccc; }
+    .table-role-setting input[type="checkbox"]:checked + label:before {
+      background: #6ACB00 url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAMCAYAAABr5z2BAAAAAXNSR0IArs4c6QAAAOJJREFUKBWdjzEKwkAURI2IYAohIFiksBD0ArZ21pYewNIL2HoBWw9gp6V4AiGdFoIo2ChYWNiIFiIo6/shBrNJ0Djw2L9/ZhbWSP0hpZRFbQKXxHXKJjggchI9QCEDU2miPdg/P0DYgCGITlBxyww5ML+9RKYPoivU/DyXDRyh6i+1Aa8Lojs0AjaLkTjoAKWAyYVdW0z0hJbuS0C+MAPRForvEHMTHiDqvPehEzMPc0mhJVhQhxuIeqGSviBUgLWk0QLO7qTUQM/G3inYsPOKcowhHVuIMiiUYeWVs1GZz90LEP0AByoU3voAAAAASUVORK5CYII=");
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: 80%; }
+  .table-role-setting .role-check-status.indeterminate + label:before {
+    background: #789e4e url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAACCAYAAABllJ3tAAAAAXNSR0IArs4c6QAAABVJREFUCB1j+P///xYgxgW2MDEQAAAOjh9NWY8S7AAAAABJRU5ErkJggg==");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 60%; }
 
 .table-historyMsgQuery {
   background: #eee;
@@ -380,25 +466,6 @@ tr.subContentTable_wrap {
 .dataTables_paginate .paginate_button.disabled {
   opacity: .5;
   pointer-events: none; }
-
-.history-search-wrapper {
-  padding: 0 1.5rem 2rem;
-  position: absolute;
-  top: 24px;
-  right: 0;
-  left: 0;
-  overflow-x: hidden;
-  overflow-y: auto;
-  height: calc(100% - 24px); }
-  .history-search-wrapper h3 {
-    border-bottom: 3px solid #0f69ff;
-    color: #000;
-    font-weight: bold;
-    font-size: 1.1rem;
-    margin-bottom: 1rem;
-    padding: .5rem 1rem;
-    text-align: center;
-    width: 33%; }
 
 .stasticReport-wrap {
   background: #fff;
@@ -482,6 +549,10 @@ select {
     color: #fff;
     transform: translateY(-1px); }
 
+.btn-wide {
+  padding-left: 3rem;
+  padding-right: 3rem; }
+
 .btn-toggle-switch .btn {
   background: #e4e4e4;
   box-shadow: none;
@@ -538,6 +609,25 @@ select {
 .badge.badge-fail {
   background: #D0021B;
   color: #eee; }
+
+.popupModal .modal-content {
+  border-radius: 1px;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.05), 0 2px 4px rgba(0, 0, 0, 0.03); }
+.popupModal .modal-body {
+  padding: 1rem 1rem;
+  text-align: center; }
+  .popupModal .modal-body i {
+    font-size: 64px; }
+.popupModal .modal-footer {
+  justify-content: center;
+  padding: 0; }
+  .popupModal .modal-footer .btn {
+    flex: 1;
+    border-radius: 0;
+    margin: 0;
+    padding: 12px; }
+    .popupModal .modal-footer .btn:hover {
+      transform: none; }
 
 /* JQuery UI Calendar Customize */
 #ui-datepicker-div {
