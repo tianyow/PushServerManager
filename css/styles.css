@@ -82,7 +82,6 @@ body {
   position: absolute; }
 
 .page-content-wrapper {
-  background: #eee;
   display: flex;
   flex: 1;
   overflow: auto; }
@@ -93,7 +92,8 @@ body {
     height: 40%;
     background: #303950;
     position: absolute;
-    top: 0; }
+    top: 0;
+    z-index: -1; }
 
 .page-content-wrapper-inner {
   margin: 0 auto;
@@ -358,7 +358,8 @@ body {
 
 .table-role-setting {
   margin: 0 15px;
-  font-size: 15px; }
+  font-size: 15px;
+  table-layout: fixed; }
   .table-role-setting th {
     background: #ddd; }
   .table-role-setting tr th, .table-role-setting tr td {
@@ -366,6 +367,10 @@ body {
     .table-role-setting tr th:nth-child(1), .table-role-setting tr th:nth-child(2), .table-role-setting tr td:nth-child(1), .table-role-setting tr td:nth-child(2) {
       background: #eee;
       text-align: left; }
+  .table-role-setting tr:hover {
+    background: #eee; }
+    .table-role-setting tr:hover td:nth-child(2) {
+      font-weight: bold; }
   .table-role-setting input[type="checkbox"] {
     position: absolute;
     opacity: 0; }
@@ -628,6 +633,11 @@ select {
     padding: 12px; }
     .popupModal .modal-footer .btn:hover {
       transform: none; }
+
+.modal-backdrop {
+  opacity: .8 !important; }
+  .modal-backdrop.show {
+    background-color: #333; }
 
 /* JQuery UI Calendar Customize */
 #ui-datepicker-div {

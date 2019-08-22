@@ -114,7 +114,7 @@ body {
 
 // Content //
 .page-content-wrapper {
-	background: #eee;
+	//background: #eee;
 	display: flex;
 	flex: 1;
 	overflow: auto;
@@ -126,6 +126,7 @@ body {
 		background: darken($base-color-dark, 10%);
 		position: absolute;
 		top: 0;
+		z-index: -1;
 	}
 }
 .page-content-wrapper-inner {
@@ -464,6 +465,7 @@ body {
 .table-role-setting {
 	margin: 0 15px;
 	font-size: 15px;
+	table-layout: fixed;
 	th {
 		background: #ddd;
 	}
@@ -475,6 +477,12 @@ body {
 				text-align: left;
 			}
 			text-align: center;
+		}
+		&:hover {
+			background: #eee;
+			td:nth-child(2) {
+				font-weight: bold;
+			}
 		}
 	}
 	// 角色設定 checkbox
@@ -870,6 +878,12 @@ select {
 				transform: none;
 			}
 		}
+	}
+}
+.modal-backdrop {
+	opacity: .8 !important;
+	&.show {
+		background-color: #333;
 	}
 }
 
