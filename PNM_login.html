@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Push Server Backend Management</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/materialdesignicons.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+
+  <body>
+    
+    <div class="login-body">
+
+      <div class="login-sys-title">
+        <h1>北祥 推播管理系統</h1>
+        <h2>Push Server</h2>
+        <h3>Backend Management</h3>
+      </div><!-- /.sys-title -->
+
+      <div class="login-form">
+
+        <form action="">
+          <div class="input-row-wrap">
+            <i class="mdi mdi-account"></i>
+            <input type="text" placeholder="使用者帳號">
+          </div>
+          <div class="input-row-wrap input-password">
+            <i class="mdi mdi-lock"></i>
+            <input type="password" placeholder="使用者密碼">
+          </div>
+          <div class="btn-row-wrap">
+            <a class="btn-login" href="PNM_1_1.html">登入</a>
+            <a class="btn-login-pwd-reset" href="#" data-toggle="modal" data-target="#popupModalRestPwd">重設密碼</a>
+          </div>
+        </form>
+
+        <div class="pwd-reset-row">
+          <a class="pwd-reset-link" href=""><i class="mdi mdi-lock-question"></i> 忘記密碼</a>
+          <a class="account-login-link" href=""><i class="mdi mdi-login-variant"></i> 帳密登入</a>
+        </div>
+
+      </div><!-- /.login-form -->
+
+      <!-- Modal -->
+      <div class="modal fade popupModal" id="popupModalRestPwd" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+          <div class="modal-content">
+            <!-- <div class="modal-header"></div> -->
+            <div class="modal-body">
+              <i class="mdi mdi-email-open-outline"></i>
+              <p>已將重設密碼寄至您的信箱</p>
+              <p><strong>jeffery@pershing.com.tw</strong></p> 
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="mdi mdi-check-bold"></i> 確定</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end of Modal -->
+      
+    </div><!-- /.login-body -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+
+  </body>
+</html>

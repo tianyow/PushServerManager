@@ -8,6 +8,28 @@ $(function () {
   	var fileName = e.target.files[0].name;
   	$('.custom-file-label').html(fileName);
   });
+  
+  // 登入
+  $('.btn-login-pwd-reset').hide();
+  $('.account-login-link').hide();
+  // -- 忘記密碼
+  $('.pwd-reset-link').click(function(e){
+    e.preventDefault();
+    $('.input-password').toggle();
+    $('.btn-login').toggle();
+    $('.btn-login-pwd-reset').toggle();
+    $('.pwd-reset-link').toggle();
+    $('.account-login-link').toggle();
+  });
+  // -- 帳號登入
+  $('.account-login-link').click(function(e){
+    e.preventDefault();
+    $('.input-password').toggle();
+    $('.btn-login').toggle();
+    $('.btn-login-pwd-reset').toggle();
+    $('.pwd-reset-link').toggle();
+    $('.account-login-link').toggle();
+  });
 
   // 新增帳號 toggle
   $('.btn-account-add').click(function(e){
@@ -185,5 +207,3 @@ var opt = {
    changeYear: true,
    changeMonth: true
    };
-
-$(".datepicker").datepicker(opt);
