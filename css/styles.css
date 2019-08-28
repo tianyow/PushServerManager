@@ -373,7 +373,8 @@ body {
     margin-bottom: 1rem;
     padding: .5rem 1rem;
     text-align: center;
-    width: 33%; }
+    width: 40%;
+    max-width: 10rem; }
 
 .btn-close-panel {
   background: #eee;
@@ -390,7 +391,6 @@ body {
 .property-wrapper {
   padding: 1rem; }
   .property-wrapper .tab-content {
-    font-size: .9rem;
     padding: 2rem 1rem;
     overflow-y: auto; }
 
@@ -432,14 +432,6 @@ body {
     background: #c9f8ff; }
   .table-accountRoleManage th, .table-accountRoleManage td {
     vertical-align: middle; }
-  .table-accountRoleManage .btn {
-    color: #fff;
-    font-size: 20px;
-    padding: 0 12px; }
-  .table-accountRoleManage .btn-account-edit, .table-accountRoleManage .btn-role-edit {
-    background: #555; }
-  .table-accountRoleManage .btn-pwd-reset, .table-accountRoleManage .btn-role-delete {
-    background: #e00000; }
 
 .table-role-setting {
   margin: 0 15px;
@@ -485,6 +477,30 @@ body {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 60%; }
+
+.table-serverManage {
+  background: #eee;
+  font-size: 15px;
+  box-shadow: 0 0.46875rem 2.1875rem rgba(0, 0, 0, 0.03), 0 0.9375rem 1.40625rem rgba(0, 0, 0, 0.03), 0 0.25rem 0.53125rem rgba(0, 0, 0, 0.05), 0 0.125rem 0.1875rem rgba(0, 0, 0, 0.03); }
+  .table-serverManage thead th {
+    background: linear-gradient(45deg, #3D4053, #444D83);
+    border-top: none;
+    color: #fff;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    white-space: nowrap; }
+  .table-serverManage tr:hover {
+    background: #c9f8ff; }
+  .table-serverManage th, .table-serverManage td {
+    vertical-align: middle; }
+  .table-serverManage table th, .table-serverManage table td {
+    padding: .5rem;
+    vertical-align: middle; }
+
+.table-item-list {
+  font-size: .9rem; }
+  .table-item-list th, .table-item-list td {
+    vertical-align: middle; }
 
 .table-historyMsgQuery {
   background: #eee;
@@ -535,27 +551,44 @@ tr.subContentTable_wrap {
   .subContentTable .row-push-total {
     border-top: 2px solid #aaa; }
 
+.dt-bootstrap {
+  display: block; }
+
 .dataTables_info,
 .dataTables_paginate {
   margin-top: 1.2rem !important; }
 
-.dataTables_paginate .paginate_button a {
-  background: #fff;
-  color: #666;
-  display: inline-block;
-  width: 32px;
-  height: 32px;
-  text-align: center;
-  text-decoration: none;
-  line-height: 2; }
-  .dataTables_paginate .paginate_button a:hover {
-    background: #eee; }
-.dataTables_paginate .paginate_button.active a {
-  background: #435070;
-  color: #fff; }
-.dataTables_paginate .paginate_button.disabled {
-  opacity: .5;
-  pointer-events: none; }
+.dataTables_paginate {
+  float: right; }
+  .dataTables_paginate .paginate_button a {
+    background: #fff;
+    border-radius: 3px;
+    color: #666;
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    text-decoration: none;
+    line-height: 2; }
+    .dataTables_paginate .paginate_button a:hover {
+      background: #eee; }
+  .dataTables_paginate .paginate_button.active a {
+    background: #435070;
+    color: #fff; }
+  .dataTables_paginate .paginate_button.disabled {
+    opacity: .5;
+    pointer-events: none; }
+
+.dataTables_empty img {
+  width: 200px; }
+.dataTables_empty span {
+  color: #0b50b7;
+  display: block;
+  padding: 5px 0;
+  font-size: 1rem;
+  font-weight: bold; }
+.dataTables_empty:hover {
+  background: #eee; }
 
 .stasticReport-wrap {
   background: #fff;
@@ -620,13 +653,18 @@ select {
   padding: .5em;
   padding-right: 1.5em; }
 
-.nav-line .nav-link {
-  border: none;
-  color: #666; }
-  .nav-line .nav-link.active {
-    border-bottom: 3px solid #0f69ff;
-    color: #000;
-    font-weight: bold; }
+.nav-line {
+  border-bottom: 3px solid #eee; }
+  .nav-line .nav-item {
+    max-width: 10rem; }
+  .nav-line .nav-link {
+    border: none;
+    color: #666;
+    margin-bottom: -3px; }
+    .nav-line .nav-link.active {
+      border-bottom: 3px solid #0f69ff;
+      color: #000;
+      font-weight: bold; }
 
 .btn[type="button"]:hover {
   transform: translateY(-1px); }
@@ -642,6 +680,15 @@ select {
 .btn-wide {
   padding-left: 3rem;
   padding-right: 3rem; }
+
+.btn-edit {
+  background: #555; }
+
+.btn-delete {
+  background: #e00000; }
+
+.btn-pwd-reset {
+  background: #e00000; }
 
 .btn-toggle-switch .btn {
   background: #e4e4e4;
@@ -693,6 +740,15 @@ select {
 
 .btn-toggle-radio .btn.active::before {
   border-radius: 6px; }
+
+.table .btn {
+  color: #fff;
+  font-size: 20px;
+  padding: 0 10px;
+  opacity: .5;
+  transition: .3s; }
+  .table .btn:hover {
+    opacity: 1; }
 
 .badge.badge-read {
   background: orange; }

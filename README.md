@@ -1,13 +1,18 @@
 # PUSH Server Manager
 
+### 2019-0828 #
+1. 重整 Table 內的按鈕樣式
+2. 底線 Tab (.nav-line) 樣式調整 
+3. 新增 DataTable 無資料時的圖片
+
 ### 2019-0827 #
 新增登入畫面
 
 ### 2019-0822 #
 
-> 帳號管理 -> PNM_1_1
-> 伺服器管理 -> PNM_2_1
-> 推播管理 -> PNM_3_1
+* 帳號管理 -> PNM_1_1
+* 伺服器管理 -> PNM_2_1
+* 推播管理 -> PNM_3_1
 
 1. history-search-wrapper -> side-panel-wrapper
 2. 帳號管理及角色管理頁面

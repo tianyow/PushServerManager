@@ -483,7 +483,8 @@ body {
     margin-bottom: 1rem;
     padding: .5rem 1rem;
     text-align: center;
-    width: 33%;
+    width: 40%;
+    max-width: 10rem;
 	}
 }
 .btn-close-panel {
@@ -501,7 +502,7 @@ body {
 .property-wrapper {
 	padding: 1rem;
 	.tab-content {
-		font-size: .9rem;
+		//font-size: .9rem;
 		padding: 2rem 1rem;
 		overflow-y: auto;
 	}
@@ -559,17 +560,6 @@ body {
 	}
 	th, td {
 		vertical-align: middle;
-	}
-	.btn {
-		color: #fff;
-		font-size: 20px;
-		padding: 0 12px;
-	}
-	.btn-account-edit, .btn-role-edit {
-		background: #555;
-	}
-	.btn-pwd-reset, .btn-role-delete {
-		background: $color-delete;
 	}
 }
 .table-role-setting {
@@ -643,7 +633,45 @@ body {
 		}
 	}
 }
-
+// 2. 伺服器管理
+.table-serverManage {
+	background: #eee;
+	font-size: 15px;
+	box-shadow: 
+	0 0.46875rem 2.1875rem rgba(0,0,0,.03), 
+	0 0.9375rem 1.40625rem rgba(0,0,0,.03), 
+	0 0.25rem 0.53125rem rgba(0,0,0,.05), 
+	0 0.125rem 0.1875rem rgba(0,0,0,.03);
+	thead th {
+		background: linear-gradient(45deg,#3D4053, #444D83);
+		border-top: none;
+		color: #fff;
+		padding-top: 8px;
+		padding-bottom: 8px;
+		white-space: nowrap;
+	}
+	tr {
+		&:hover {
+			background: #c9f8ff;
+		}
+	}
+	th, td {
+		vertical-align: middle;
+	}
+	table {
+		th,td {
+			padding: .5rem;
+			vertical-align: middle;
+		}
+	}
+}
+// Log設定
+.table-item-list {
+	font-size: .9rem;	
+	th,td {
+		vertical-align: middle;
+	}
+}
 // 3.2 歷史訊息查詢 ---------------------------------------------------------- //
 .table-historyMsgQuery {
 	background: #eee;
@@ -718,7 +746,7 @@ tr.subContentTable_wrap {
 }
 // DataTable Customize
 .dt-bootstrap {
-
+	display: block; // 解決 Table 寬度的問題
 }
 .dataTables_info,
 .dataTables_paginate {
@@ -726,9 +754,11 @@ tr.subContentTable_wrap {
 }
 // Pagination
 .dataTables_paginate {
+	float: right;
 	.paginate_button {
 		a {
 			background: #fff;
+			border-radius: 3px;
 			color: #666;
 			display: inline-block;
 			width: 32px;
@@ -750,6 +780,21 @@ tr.subContentTable_wrap {
 			opacity: .5;
 			pointer-events: none;
 		}
+	}
+}
+.dataTables_empty {
+	img {
+		width: 200px;
+	}
+	span {
+		color: #0b50b7;
+		display: block;
+		padding: 5px 0;
+		font-size: 1rem;
+		font-weight: bold;
+	}
+	&:hover {
+		background: #eee;
 	}
 }
 // 歷史訊息搜詢 Panel
@@ -846,9 +891,14 @@ select {
 }
 // Tabs - Line Tab
 .nav-line {
+	border-bottom: 3px solid #eee;
+	.nav-item {
+		max-width: 10rem;
+	}
 	.nav-link {
 		border: none;
 		color: #666;
+		margin-bottom: -3px;
 		&.active {
 			border-bottom: 3px solid $link-color;
 			color: #000;
@@ -871,10 +921,25 @@ select {
 		transform: translateY(-1px);
 	}
 }
+// Button Sizes
 .btn-wide {
 	padding-left: 3rem;
 	padding-right: 3rem;
 }
+// Button Types
+.btn-edit {
+	background: #555;
+}
+// .btn-download {
+// 	background: #555;
+// }
+.btn-delete {
+	background: $color-delete;
+}
+.btn-pwd-reset {
+	background: $color-delete;
+}
+
 // Toggle Switch
 .btn-toggle-switch {
 	.btn {
@@ -946,6 +1011,19 @@ select {
 }
 // Toggle Checkbox
 
+// Table Buttons
+.table {
+	.btn {
+		color: #fff;
+		font-size: 20px;
+		padding: 0 10px;
+		opacity: .5;
+		transition: .3s;
+		&:hover {
+			opacity: 1;
+		}
+	}
+}
 
 // Badges
 .badge {

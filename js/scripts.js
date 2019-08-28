@@ -67,6 +67,18 @@ $(function () {
   	$('.role-edit-panel.side-panel').toggleClass('open');
   	$('.panel-mask').show();
   });
+  // 活動紀錄 toggle
+  $('.btn-activity-search').click(function(e){
+  	e.preventDefault();
+  	$('.activity-record-panel.side-panel').toggleClass('open');
+  	$('.panel-mask').show();
+  });
+  // 伺服器列表 toggle
+  $('.btn-server-add').click(function(e){
+  	e.preventDefault();
+  	$('.server-list-panel.side-panel').toggleClass('open');
+  	$('.panel-mask').show();
+  });
 
   // App 註冊與設定 toggle
   $('.btn-app-setting').click(function(e){
@@ -110,6 +122,7 @@ var qryTableOptions = {
   searching: false,
   pageLength: 20,
   ordering: false,
+  autoWidth: false,
   language: 
   {
     "emptyTable":     "目前無任何資料",
