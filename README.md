@@ -1,5 +1,10 @@
 # PUSH Server Manager
 
+### 2019-0903 #
+1. 修改 Line-tab 的寬度問題 
+2. 更改 card hover 樣式
+
+
 ### 2019-0828 #
 1. 重整 Table 內的按鈕樣式
 2. 底線 Tab (.nav-line) 樣式調整 

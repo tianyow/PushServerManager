@@ -251,10 +251,27 @@ body {
   border: none;
   border-radius: .5rem;
   margin-bottom: 2rem;
-  box-shadow: 0 0.46875rem 2.1875rem rgba(0, 0, 0, 0.03), 0 0.9375rem 1.40625rem rgba(0, 0, 0, 0.03), 0 0.25rem 0.53125rem rgba(0, 0, 0, 0.05), 0 0.125rem 0.1875rem rgba(0, 0, 0, 0.03);
-  transition: .3s; }
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1); }
+  .card-app::after {
+    content: "";
+    border-radius: .5rem;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1); }
   .card-app:hover {
-    transform: translateY(-5px); }
+    -webkit-transform: scale(1.01);
+    transform: scale(1.01); }
+    .card-app:hover::after {
+      opacity: 1; }
   .card-app .card-body {
     position: relative; }
   .card-app .card-img-top {
@@ -600,8 +617,9 @@ tr.subContentTable_wrap {
 .stasticReport-tab .nav {
   display: inline-block; }
   .stasticReport-tab .nav li {
-    float: left;
-    padding: 0 20px; }
+    float: left; }
+    .stasticReport-tab .nav li a {
+      padding: .5rem 2rem; }
 .stasticReport-tab .tab-content {
   padding-top: 1rem; }
 
@@ -656,7 +674,7 @@ select {
 .nav-line {
   border-bottom: 3px solid #eee; }
   .nav-line .nav-item {
-    max-width: 10rem; }
+    max-width: 12rem; }
   .nav-line .nav-link {
     border: none;
     color: #666;
