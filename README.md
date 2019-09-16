@@ -1,5 +1,8 @@
 # PUSH Server Manager
 
+### 2019-0916 #
+1. 新增 Error頁面及 icon
+
 ### 2019-0903 #
 1. 修改 Line-tab 的寬度問題 
 2. 更改 card hover 樣式

@@ -82,7 +82,7 @@ body {
   font-size: 1.2rem;
   font-weight: bold;
   text-align: center;
-  padding: 12px;
+  padding: 12px 20px;
   text-decoration: none;
   box-shadow: 0 3px 0 #303950, 0 6px 0 #394560; }
 .btn-row-wrap .btn-login {
@@ -97,6 +97,24 @@ body {
     color: #fff;
     font-size: .9rem;
     text-decoration: none; }
+
+.error-wrap {
+  background: linear-gradient(#435070, #556690);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; }
+  .error-wrap .error-info-text {
+    color: #fff;
+    font-size: 18px;
+    margin: 30px 0; }
+  .error-wrap .error-icon {
+    display: block;
+    width: 240px; }
+  .error-wrap .btn-login {
+    width: 200px; }
 
 .header-nav {
   background: #435070;
