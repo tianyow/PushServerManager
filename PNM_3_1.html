@@ -62,7 +62,10 @@
                   <a class="nav-link active" id="PSM-tab-app-setting" data-toggle="pill" href="#app-setting" role="tab">APP 註冊與設定</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" id="PSM-tab-history-query" data-toggle="pill" href="#history-query" role="tab">歷史訊息查詢</a>
+                  <a class="nav-link" id="PSM-tab-publish-manage" data-toggle="pill" href="#publish-manage" role="tab">推播發送管理</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="PSM-tab-history-query" data-toggle="pill" href="#history-query" role="tab">推播歷史查詢</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" id="PSM-tab-stastic-report" data-toggle="pill" href="#stastic-report" role="tab">統計報表</a>
@@ -581,6 +584,224 @@
 
               </div><!-- /. Tab 1: APP 註冊與設定 -->
 
+              <div class="tab-pane fade" id="publish-manage" role="tabpanel">
+                <!-- 搜尋按鈕 -->
+                <div class="tabpane_searchWrap">
+                  <button class="btn btn-history-search-setting" type="button" id=""><i class="mdi mdi-magnify"></i></button>
+                </div><!-- /.tabpane_searchWrap -->
+
+                <div class="table-responsive">
+                  <table id="historyMsgQueryTable" class="table table-historyMsgQuery" cellpadding="0" cellspacing="0">
+                    <thead>
+                      <tr>
+                        <th></th>
+                        <th>APP名稱</th>
+                        <th>Tag</th>
+                        <th>推播起日</th>
+                        <th>推播迄日</th>
+                        <th>推播標題</th>
+                        <th>狀態</th>
+                        <th>推播對象</th>
+                        <th>申請人</th>
+                        <th width="100">維護作業</th>
+                        <th width="50">檢視</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="row-toggle-control"><a href="" class="row-toggle"><i class="mdi mdi-chevron-right"></i></a></td>
+                        <td>永豐銀行</td>
+                        <td>最新消息</td>
+                        <td>2023/02/10 00:00</td>
+                        <td>2023/02/10 23:30</td>
+                        <td>外幣買賣優惠加碼</td>
+                        <td><div class="badge badge-secondary">未發送</div></td>
+                        <td>iOS</td>
+                        <td>sinopaciT</td>
+                        <td>
+                          <a href="" class="btn btn-edit" data-toggle="tooltip" title="編輯"><i class="mdi mdi-playlist-edit"></i></a>
+                          <a href="" class="btn btn-delete" data-toggle="tooltip" title="下架"><i class="mdi mdi-pause-octagon"></i></a>
+                        </td>
+                        <td><a href="" class="btn btn-normal" data-toggle="tooltip" title="檢視"><i class="mdi mdi-eye"></i></a></td>
+                      </tr>
+                      <tr>
+                        <td class="row-toggle-control"><a href="" class="row-toggle"><i class="mdi mdi-chevron-right"></i></a></td>
+                        <td>永豐銀行</td>
+                        <td>最新消息</td>
+                        <td>2023/02/10 00:00</td>
+                        <td>2023/02/10 23:30</td>
+                        <td>外幣買賣優惠加碼</td>
+                        <td><div class="badge badge-success">已發送</div></td>
+                        <td>iOS</td>
+                        <td>sinopaciT</td>
+                        <td>
+                          <a href="" class="btn btn-edit" data-toggle="tooltip" title="編輯"><i class="mdi mdi-playlist-edit"></i></a>
+                          <a href="" class="btn btn-delete" data-toggle="tooltip" title="下架"><i class="mdi mdi-pause-octagon"></i></a>
+                        </td>
+                        <td><a href="" class="btn btn-normal" data-toggle="tooltip" title="檢視"><i class="mdi mdi-eye"></i></a></td>
+                      </tr>
+                      <tr>
+                        <td class="row-toggle-control"><a href="" class="row-toggle"><i class="mdi mdi-chevron-right"></i></a></td>
+                        <td>永豐銀行</td>
+                        <td>最新消息</td>
+                        <td>2023/02/10 00:00</td>
+                        <td>2023/02/10 23:30</td>
+                        <td>外幣買賣優惠加碼</td>
+                        <td><div class="badge badge-secondary">未發送</div></td>
+                        <td>iOS</td>
+                        <td>sinopaciT</td>
+                        <td>
+                          <a href="" class="btn btn-edit" data-toggle="tooltip" title="編輯"><i class="mdi mdi-playlist-edit"></i></a>
+                          <a href="" class="btn btn-delete" data-toggle="tooltip" title="下架"><i class="mdi mdi-pause-octagon"></i></a>
+                        </td>
+                        <td><a href="" class="btn btn-normal" data-toggle="tooltip" title="檢視"><i class="mdi mdi-eye"></i></a></td>
+                      </tr>
+                      <tr>
+                        <td class="row-toggle-control"><a href="" class="row-toggle"><i class="mdi mdi-chevron-right"></i></a></td>
+                        <td>永豐銀行</td>
+                        <td>最新消息</td>
+                        <td>2023/02/10 00:00</td>
+                        <td>2023/02/10 23:30</td>
+                        <td>外幣買賣優惠加碼</td>
+                        <td><div class="badge badge-success">已發送</div></td>
+                        <td>iOS</td>
+                        <td>sinopaciT</td>
+                        <td>
+                          <a href="" class="btn btn-edit" data-toggle="tooltip" title="編輯"><i class="mdi mdi-playlist-edit"></i></a>
+                          <a href="" class="btn btn-delete" data-toggle="tooltip" title="下架"><i class="mdi mdi-pause-octagon"></i></a>
+                        </td>
+                        <td><a href="" class="btn btn-normal" data-toggle="tooltip" title="檢視"><i class="mdi mdi-eye"></i></a></td>
+                      </tr>
+                      <tr>
+                        <td class="row-toggle-control"><a href="" class="row-toggle"><i class="mdi mdi-chevron-right"></i></a></td>
+                        <td>永豐銀行</td>
+                        <td>最新消息</td>
+                        <td>2023/02/10 00:00</td>
+                        <td>2023/02/10 23:30</td>
+                        <td>外幣買賣優惠加碼</td>
+                        <td><div class="badge badge-secondary">未發送</div></td>
+                        <td>iOS</td>
+                        <td>sinopaciT</td>
+                        <td>
+                          <a href="" class="btn btn-edit" data-toggle="tooltip" title="編輯"><i class="mdi mdi-playlist-edit"></i></a>
+                          <a href="" class="btn btn-delete" data-toggle="tooltip" title="下架"><i class="mdi mdi-pause-octagon"></i></a>
+                        </td>
+                        <td><a href="" class="btn btn-normal" data-toggle="tooltip" title="檢視"><i class="mdi mdi-eye"></i></a></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!-- 歷史訊息搜尋條件 Panel -->
+                <div class="history-search-panel side-panel">
+                  <div class="side-panel-wrapper">
+                    <div class="panel-content">
+                      <h3>搜尋</h3>
+                      <div class="form-group row">
+                        <label for="" class="col-md-3 col-form-label">名稱</label>
+                        <div class="col">
+                          <input type="text" class="form-control" id="" placeholder="">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="" class="col-md-3 col-form-label">APP ID</label>
+                        <div class="col">
+                          <input type="text" class="form-control" id="" placeholder="">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="" class="col-md-3 col-form-label">Mag ID</label>
+                        <div class="col">
+                          <input type="text" class="form-control" id="" placeholder="">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="" class="col-md-3 col-form-label">Group ID</label>
+                        <div class="col">
+                          <input type="text" class="form-control" id="" placeholder="">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="" class="col-md-3 col-form-label">Tag</label>
+                        <div class="col">
+                          <input type="text" class="form-control" id="" placeholder="">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="" class="col-md-3 col-form-label">狀態</label>
+                        <div class="col">
+                          <div class="btn-group-toggle btn-toggle-checkbox" data-toggle="buttons">
+                            <label class="btn active">
+                              <input type="checkbox" checked>成功
+                            </label>
+                            <label class="btn">
+                              <input type="checkbox">失敗
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="" class="col-md-3 col-form-label">推播</label>
+                        <div class="col">
+                          <div class="btn-group-toggle btn-toggle-checkbox" data-toggle="buttons">
+                            <label class="btn active">
+                              <input type="checkbox" checked>已推播
+                            </label>
+                            <label class="btn">
+                              <input type="checkbox">預約
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="" class="col-md-3 col-form-label">推播設備</label>
+                        <div class="col">
+                          <div class="btn-group-toggle btn-toggle-checkbox" data-toggle="buttons">
+                            <label class="btn active">
+                              <input type="checkbox" checked>iOS
+                            </label>
+                            <label class="btn">
+                              <input type="checkbox">Android
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="" class="col-md-3 col-form-label">推播對象</label>
+                        <div class="col">
+                          <input type="text" class="form-control" id="" placeholder="">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="" class="col-md-3 col-form-label">發送時間</label>
+                        <div class="col">
+                          <div class="input-group">
+                            <input type="text" class="form-control datepicker">
+                            <input type="text" class="form-control datepicker">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="" class="col-md-3 col-form-label">讀取</label>
+                        <div class="col">
+                          <div class="btn-group-toggle btn-toggle-checkbox" data-toggle="buttons">
+                            <label class="btn active">
+                              <input type="checkbox" checked> 已讀取
+                            </label>
+                            <label class="btn">
+                              <input type="checkbox"> 未讀取
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <button type="button" class="btn btn-primary btn-block"><i class="mdi mdi-magnify"></i> 查詢</button>
+                    </div><!-- /.panel-content -->
+                    
+                  </div><!-- /.side-panel-wrapper -->
+                  <a href="#" class="btn-close-panel"><i class="mdi mdi-close"></i></a>
+
+                </div><!-- / .history-search-panel -->
+
+              </div><!-- /. Tab 2: 推播發送管理 -->
               <div class="tab-pane fade" id="history-query" role="tabpanel">
                 <!-- 搜尋按鈕 -->
                 <div class="tabpane_searchWrap">
@@ -823,7 +1044,7 @@
 
                 </div><!-- / .history-search-panel -->
 
-              </div><!-- /. Tab 2: 歷史訊息查詢 -->
+              </div><!-- /. Tab 3: 推播歷史查詢 -->
 
               <div class="tab-pane fade" id="stastic-report" role="tabpanel">
                 <!-- 搜尋按鈕 -->
@@ -946,7 +1167,7 @@
 
                 </div><!-- / .history-search-panel -->
 
-              </div><!-- /. Tab 3: 統計報表 -->
+              </div><!-- /. Tab 4: 統計報表 -->
 
             </div><!-- /. tab-content -->
 
@@ -962,7 +1183,7 @@
             <div class="modal-content">
               <!-- <div class="modal-header"></div> -->
               <div class="modal-body">
-                <i class="mdi mdi-alert-octagon-outline text-danger"></i>
+                <i class="mdi mdi-alert-octagon text-danger"></i>
                 <p>確定要登出?</p>
               </div>
               <div class="modal-footer">

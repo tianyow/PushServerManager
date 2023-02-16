@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Push Server Backend Management</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="vendor/DataTables/datatables.min.css" />
+  <link rel="stylesheet" href="vendor/materialdesignicons.min.css">
+  <link rel="stylesheet" href="vendor/jquery-ui/jquery-ui.css" />
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    /* 專用樣式，其它頁面不用 */
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+    ul li {
+      list-style: none;
+    }
+    ul li a {
+      display: inline-block;
+      padding: 8px 0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar header-nav">
+
+    <div class="header-nav-wrap">
+      <a class="sys-title" href="">Push Server</a>
+
+      <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-link" href="PNM_1_1.html"><i class="mdi mdi-account-outline"></i> 帳號管理</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="PNM_2_1.html"><i class="mdi mdi-dns-outline"></i> 伺服器管理</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="PNM_3_1.html"><i class="mdi mdi-flash-outline"></i> 推播管理</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="UI-elements.html"><i class="mdi mdi-group"></i> UI元件整理</a>
+        </li>
+      </ul>
+
+    </div><!-- /.header-info-wrap -->
+
+    <div class="user-info-wrap">
+      <a href="" class="username">jefferyho@pershing.com.tw</a>
+      <div class="dropdown">
+        <a class="user-photo-icon" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <img src="https://placekitten.com/48/48" alt="">
+        </a>
+        <div class="dropdown-menu dropdown-menu-right">
+          <a class="dropdown-item" href="#"><i class="mdi mdi-account-circle-outline"></i> 使用者設定</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#" data-toggle="modal" data-target="#popupModalLogout"><i
+              class="mdi mdi-power-standby"></i> 登出系統</a>
+        </div>
+      </div>
+    </div><!-- /.logout-wrap -->
+
+  </nav><!-- /.header-nav -->
+
+  <div class="page-body">
+
+    <div class="page-content-wrapper">
+
+      <div class="page-content-wrapper-inner_blank">
+        <h2>Modal</h2>
+        <ul>
+          <li><a href="" data-toggle="modal" data-target="#popupModalSuccess">成功視窗</a></li>
+          <li><a href="" data-toggle="modal" data-target="#popupModalWarning">警示視窗</a></li>
+          <li><a href="" data-toggle="modal" data-target="#popupModalFailure">失敗視窗</a></li>
+        </ul>
+
+      </div><!-- /.page-content-wrapper-inner -->
+
+      <!-- Modal: 登出提示視窗 -->
+      <div class="modal fade popupModal" id="popupModalLogout" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+          <div class="modal-content">
+            <!-- <div class="modal-header"></div> -->
+            <div class="modal-body">
+              <i class="mdi mdi-alert-octagon text-danger"></i>
+              <p>確定要登出?</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary"  data-dismiss="modal">確定</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end of Modal -->
+
+      <!-- Modal: 成功視窗 -->
+      <div class="modal fade popupModal" id="popupModalSuccess" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+          <div class="modal-content">
+            <!-- <div class="modal-header"></div> -->
+            <div class="modal-body">
+              <i class="mdi mdi-check-circle text-success"></i>
+              <p>已成功完成操作</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary"  data-dismiss="modal">確定</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end of Modal -->
+
+      <!-- Modal: 警示視窗 -->
+      <div class="modal fade popupModal" id="popupModalWarning" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+          <div class="modal-content">
+            <!-- <div class="modal-header"></div> -->
+            <div class="modal-body">
+              <i class="mdi mdi-alert-octagon text-danger"></i>
+              <p>發生錯誤，請重新操作</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-dismiss="modal">確定</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end of Modal -->
+
+      <!-- Modal: 失敗視窗 -->
+      <div class="modal fade popupModal" id="popupModalFailure" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+          <div class="modal-content">
+            <!-- <div class="modal-header"></div> -->
+            <div class="modal-body">
+              <i class="mdi mdi-close-circle text-danger"></i>
+              <p>操作失敗，請重新再試</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-dismiss="modal">確定</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end of Modal -->
+
+    </div><!-- /.page-content-wrapper -->
+
+  </div><!-- /.page-body -->
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="vendor/jquery-ui/jquery-ui.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="vendor/DataTables/datatables.min.js"></script>
+  <script src="js/scripts.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('#accountManageTable').DataTable(qryTableOptions);
+      $('#roleManageTable').DataTable(qryTableOptions);
+      $(".datepicker").datepicker(opt);
+    });
+  </script>
+
+</body>
+
+</html>
